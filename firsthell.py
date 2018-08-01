@@ -4,3 +4,4 @@ Type "copyright", "credits" or "license()" for more information.
 >>> print ("hello world")
 hello world
 >>> 
+print (hi hello world this is git boy)
