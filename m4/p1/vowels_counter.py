@@ -8,6 +8,6 @@ def main():
 	number_of_vowels = 0
 	# s is the given input
     for letter in range(s):
-    if letter = 'a','e','i','o','u'
-       number of vowels +=1
-    print('number of vowels =' number_of_vowels)
+    	if letter = 'a','e','i','o','u':
+    		number of vowels +=1
+    print(number_of_vowels)
