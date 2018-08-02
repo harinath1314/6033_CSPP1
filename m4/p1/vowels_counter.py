@@ -11,6 +11,3 @@ def main():
         if letter in ('a','e','i','o','u'):
             number_of_vowels +=1
     print(number_of_vowels)
-
-if __name__ == '__main__':
-    main()
