@@ -10,7 +10,7 @@ Longest substring in alphabetical order is: abc
 
 def main():
     '''
-    give a input string 
+    give a input string
     and print the longest alphabetical sequence
     '''
     string = input()
@@ -25,8 +25,8 @@ def main():
                 highest = count
                 end = i + 1
         else:
-            count = 0       
+            count = 0     
     sequence = end - highest
     print(string[sequence:end+1])
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
