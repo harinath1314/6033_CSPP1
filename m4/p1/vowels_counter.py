@@ -8,7 +8,7 @@ def main():
     number_of_vowels = 0
     # s is the given input
     for letter in s:
-        if letter in ('a','e','i','o','u'):
+        if letter in ('a', 'e', 'i', 'o', 'u'):
             number_of_vowels += 1
     print(number_of_vowels)
 
