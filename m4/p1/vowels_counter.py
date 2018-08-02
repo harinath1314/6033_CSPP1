@@ -4,10 +4,10 @@ if you give string as hari then number of vowels = 2
 '''
 
 def main():
-	s = input()
-	number_of_vowels = 0
-	# s is the given input
+    s = input()
+    number_of_vowels = 0
+    # s is the given input
     for letter in range(s):
-    	if letter = 'a','e','i','o','u':
-    		number of vowels +=1
+        if letter = 'a','e','i','o','u':
+            number of vowels +=1
     print(number_of_vowels)
