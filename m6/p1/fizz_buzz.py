@@ -8,18 +8,17 @@ def main():
     '''
     Read number from the input, store it in variable N.
     '''
-    N = int(input())
-    for x in range(1,N+1):
-        if x%3 == 0 and x%5 != 0:
+    Num_in = int(input())
+    for num_ber in range(1, Num_in+1):
+        if num_ber%3 == 0 and num_ber%5 != 0:
             print("Fizz")
-        elif x%5 == 0 and x%3 != 0:
+        elif num_ber%5 == 0 and num_ber%3 != 0:
             print("Buzz")
-        elif x%3 == 0 and x%5 == 0:
+        elif num_ber%3 == 0 and num_ber%5 == 0:
             print("Fizz")
             print("Buzz")
         else:
-            print(x)
-        
+            print(num_ber)
 
 if __name__ == "__main__":
     main()
