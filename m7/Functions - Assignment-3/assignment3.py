@@ -1,4 +1,10 @@
-
+'''
+o find the smallest monthly payment to the cent
+(no more multiples of $10) such that we can pay off the debt
+within a year. Try it out with large inputs, and notice
+how fast it is (try the same large inputs in your solution
+to Problem 2 to compare!). 
+'''
 def payingdebtoffina_year(balance_in, annual_interestrate):
     '''
     this is thu function uses bisection for fast programming
