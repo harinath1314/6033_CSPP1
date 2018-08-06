@@ -9,18 +9,10 @@ def main():
     Read any number from the input, store it in variable int_input.
     '''
     num_= int(input())
-    ans = 1
-    cod = 1
-    i=0
-    while True:
-    	i<=num_
-    	ans=num_*(num_-1)
-    	cod = cod*ans
-    	i=i+1
-    	num_ = num_-1
-
-    print(cod)
-
+    ans=1
+    for i in (num_):
+        ans=i*(i+1)
+    print(ans)
 
 if __name__ == "__main__":
     main()
