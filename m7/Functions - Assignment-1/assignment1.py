@@ -1,5 +1,5 @@
 '''
-this is a program that gives the balance amount of credit card bill repayment at the end of year 
+this is a program that gives the balance amount of credit card bill repayment at the end of year
 '''
 
 def paying_debtoffinayear(balance_h, annual_interestrate, monthly_paymentrate):
