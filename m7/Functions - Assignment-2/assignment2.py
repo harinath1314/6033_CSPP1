@@ -21,7 +21,7 @@ def paying_debtoffinayear(start_balance, annual_interestrate):
         start_balance = (monthly_unpaid_balance) + (monthly_interest_rate*monthly_unpaid_balance)
         if start_balance <0:
             ha_ri = 0
-        if month_count == 12 and hari != 0:
+        if month_count == 12 and ha_ri != 0:
             min_monthlypayment += 10
             month_count = 0
             start_balance = temp
