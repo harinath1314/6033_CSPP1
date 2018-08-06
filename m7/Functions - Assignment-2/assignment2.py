@@ -27,6 +27,9 @@ def paying_debtoffinayear(start_balance, annual_interestrate):
             start_balance = temp
     return min_monthlypayment
 def main():
+    '''
+    this is final program to show the min_monthlypayment
+    '''
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
