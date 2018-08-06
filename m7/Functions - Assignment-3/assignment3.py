@@ -7,14 +7,14 @@ to Problem 2 to compare!)
 '''
 def payingdebtoffina_year(balance_in, annual_interestrate):
     '''
-    this is thu function uses bisection for fast programming
+    this is the function uses bisection for fast programming
     '''
     initial_balance = balance_in
     monthly_interest_rate = annual_interestrate / 12
     lower_payment = initial_balance / 12
     upper_payment = (initial_balance * (1 + monthly_interest_rate) ** 12) / 12.0
     elipson_x = 0.03
-    while abs(balance_in > elipson_x):
+    while abs(balance_in) > elipson_x:
         moynthly_payrate = (upper_payment + lower_payment) / 2
         balance_in = initial_balance
         for _ in range(12):
@@ -24,8 +24,6 @@ def payingdebtoffina_year(balance_in, annual_interestrate):
             lower_payment = moynthly_payrate
         elif balance_in < -elipson_x:
             upper_payment = moynthly_payrate
-        else:
-            break
     return str(round(moynthly_payrate, 2))
 def main():
     '''
