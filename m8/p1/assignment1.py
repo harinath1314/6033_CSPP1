@@ -12,7 +12,7 @@ def factorial_of_given_number(num_ber):
     if num_ber == 0:
         return 1
     else:
-        return num_ber*factorial_of_given_number(n-1)
+        return num_ber*factorial_of_given_number(num_ber-1)
 def main():
     '''
     this is the main program 
