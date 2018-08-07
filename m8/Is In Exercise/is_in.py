@@ -10,16 +10,26 @@ def is_in(char, aStr):
     
     returns: True if char is in aStr; False otherwise
     '''
-    if char == aStr[i]:
-        return "True"
+    length = len(aStr)
+    if length == 0:
+        return False
+    if length == 1:
+        if char == aStr[0]:
+            return True
+        else:
+            return False
     else:
-        return is_in(char, aStr[i+1])
-
+        mid=len(aStr)//2
+        if char == aStr[mid]:
+            return True
+        elif char < aStr[mid]:
+            return is_in(char, aStr[:mid])
+        else:
+            return is_in(char, aStr[mid:])
 def main():
     data = input()
     data = data.split()
-    print(is_in((data[0][0]), data[1]))
-
-
-if __name__== "__main__":
+    hari = sorted(data[1])
+    print(is_in((data[0]), hari))
+if __name__ == "__main__":
     main()
