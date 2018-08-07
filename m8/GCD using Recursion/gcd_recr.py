@@ -10,7 +10,9 @@ def gcdRecur(a, b):
     
     returns: a positive integer, the greatest common divisor of a & b.
     '''
+    #a!=0 0 and b!==0
     first_=max(a, b)
+
     second_=min(a, b)
     rem=first_%second_
     if first_%second_==0:
