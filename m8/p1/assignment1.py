@@ -11,11 +11,10 @@ def factorial_of_given_number(num_ber):
     '''
     if num_ber == 0:
         return 1
-    else:
-        return num_ber*factorial_of_given_number(num_ber-1)
+    return num_ber*factorial_of_given_number(num_ber-1)
 def main():
     '''
-    this is the main program 
+    this is the main program
     to calculate
     the factorial
     of the given positive integer
@@ -24,4 +23,3 @@ def main():
     print(factorial_of_given_number(int(give_input)))
 if __name__ == "__main__":
     main()
-
