@@ -18,9 +18,9 @@ def is_word_guessed(secret_word, letters_guessed):
     for vari_able in secret_word:
         if vari_able in letters_guessed:
             post = post-1
-    if post ==  0:
+    if post == 0:
         return True
-    return False          
+    return False
 def main():
     '''
     Main function of  the program
