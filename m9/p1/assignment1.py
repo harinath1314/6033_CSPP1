@@ -14,14 +14,13 @@ def is_word_guessed(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
-    post=len(secret_word)
+    post = len(secret_word)
     for vari_able in secret_word:
         if vari_able in letters_guessed:
-            post=post-1
-    if post==0:
+            post = post-1
+    if post ==  0:
         return True
-    return False
-            
+    return False          
 def main():
     '''
     Main function of  the program
