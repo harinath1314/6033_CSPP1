@@ -33,11 +33,11 @@ def create_social_network(data):
     '''
     # start
     social_met = {}
-    a = data.split('\n')
+    a_jus = data.split('\n')
     hint_ = []
-    for lines in a:
+    for lines in a_jus:
         lists_ = lines.split(' follows ')
-        hint_ += lists_        
+        hint_ += lists_
     print(hint_)
     return social_met
 def main():
