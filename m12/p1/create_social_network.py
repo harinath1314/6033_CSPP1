@@ -31,22 +31,15 @@ def create_social_network(data):
         Return a empty dictionary if the string format of the data is invalid
         Empty dictionary is not None, it is a dictionary with no keys
     '''
-
     # start
     social_met = {}
     a = data.split('\n')
     hint_ = []
     for lines in a:
         lists_ = lines.split(' follows ')
-        hint_+= lists_
-        
+        hint_ += lists_        
     print(hint_)
-    
-
     return social_met
-
-
-
 def main():
     '''
         handling testcase input and printing output
@@ -57,9 +50,6 @@ def main():
         i += 1
         string += input()
         string += '\n'
-
-
     print(create_social_network(string))
-
 if __name__ == "__main__":
     main()
