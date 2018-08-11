@@ -11,11 +11,12 @@ def how_many(aDict):
     returns: int, how many values are in the dictionary.
     '''
     values_ofdic = aDict.values()
-    sum = 0 
+    sum_ = 0 
     for x in values_ofdic:
         lenof_x = len(x)
-        sum = sum + lenof_x
-    return sum
+        sum_ = sum_ + lenof_x
+
+    return sum_,values_ofdic
 
     
 
@@ -35,7 +36,9 @@ def main():
         else:
             aDict[l[0][0]].append(l[1])
     print(how_many(aDict))
-    
+    print(how_many(aDict)[1])
+
+
 
 
 if __name__ == "__main__":
