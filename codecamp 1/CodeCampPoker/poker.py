@@ -30,7 +30,7 @@ def is_straight(hand):
         else:
             test_list.append(int(every[0]))
     test_list.sort()
-    for i in range (len(test_list) - 1):
+    for i in range(len(test_list) - 1):
         if test_list[i + 1] == test_list[i] + 1:
             return True
         return False
@@ -84,7 +84,6 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    return 1
 
 def poker(hands):
     '''
