@@ -49,7 +49,7 @@ def is_flush(hand):
     '''
     test_list = []
     for card in hand:
-        test_list.append(every[1])
+        test_list.append(card[1])
     if test_list.count(test_list[0]) == len(test_list):
         return True
     else:
