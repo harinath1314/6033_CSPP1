@@ -30,7 +30,6 @@ def is_straight(hand):
         else:
             test_list.append(int(every[0]))
     test_list.sort()
-    print(test_list)
     for i in range (len(test_list) - 1):
         if test_list[i + 1] == test_list[i] + 1:
             return True 
