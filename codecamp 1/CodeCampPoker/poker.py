@@ -33,7 +33,8 @@ def is_straight(hand):
     for i in range(len(test_list) - 1):
         if test_list[i + 1] == test_list[i] + 1:
             return True
-        return False
+        else:
+            return False
 
 
 def is_flush(hand):
@@ -60,13 +61,17 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
+    THREE = 3
+    TWO = 2
+    ONE = 1
+    ZERO = 0
     if is_flush(hand) and is_straight(hand):
-        return 3
+        return THREE
     elif is_flush:
-        return 2
+        return TWO
     elif is_straight:
-        return 1
-    return 0
+        return ONE
+    return ZERO
 
 
     # By now you should have seen the way a card is represented.
