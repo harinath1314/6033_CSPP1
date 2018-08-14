@@ -1,0 +1,4 @@
+THREE = 3
+TWO = 2
+ONE = 1
+ZERO = 0
