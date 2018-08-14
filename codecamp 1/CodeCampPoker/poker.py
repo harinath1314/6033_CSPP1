@@ -61,17 +61,17 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
-    THREE = 3
-    TWO = 2
-    ONE = 1
-    ZERO = 0
+    CONST_THREE = 3
+    CONST_TWO = 2
+    CONST_ONE = 1
+    CONST_ZERO = 0
     if is_flush(hand) and is_straight(hand):
-        return THREE
+        return CONST_THREE
     elif is_flush:
-        return TWO
+        return CONST_TWO
     elif is_straight:
-        return ONE
-    return ZERO
+        return CONST_ONE
+    return CONST_ZERO
 
 
     # By now you should have seen the way a card is represented.
