@@ -14,8 +14,8 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    test_list=[]
-    converters={'A':14,'J':13,'Q':12,'K':11,'T':10}
+    test_list = []
+    converters = {'A':14, 'J':13, 'Q':12, 'K':11, 'T':10}
     for card in HANDS:
         for every in card:
             if every[0] == 'A':
@@ -32,8 +32,8 @@ def is_straight(hand):
                 test_list.append(int(every[0]))
         test_list.sort()
         print(test_list)
-        for i in range (len(test_list)-1):
-            if test_list[i+1]==test_list[i]+1:
+        for i in range (len(test_list) - 1):
+            if test_list[i + 1] == test_list[i] + 1:
                 return True 
             else:
                 return False
@@ -48,11 +48,11 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    test_list=[]
+    test_list = []
     for card in HANDS:
         for every in card:
             test_list.append(every[1])
-        if test_list.count(test_list[0])==len(test_list):
+        if test_list.count(test_list[0]) == len(test_list):
             return True
         else:
             return False
