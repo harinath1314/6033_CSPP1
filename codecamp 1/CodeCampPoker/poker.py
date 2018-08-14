@@ -16,27 +16,26 @@ def is_straight(hand):
     '''
     test_list = []
     converters = {'A':14, 'J':13, 'Q':12, 'K':11, 'T':10}
-    for card in HANDS:
-        for every in card:
-            if every[0] == 'A':
-                test_list.append(int(converters[every[0]]))
-            elif every[0] == 'J':
-                test_list.append(int(converters[every[0]]))
-            elif every[0] == 'Q':
-                test_list.append(int(converters[every[0]]))
-            elif every[0] == 'K':
-                test_list.append(int(converters[every[0]]))
-            elif every[0] == 'T':
-                test_list.append(int(converters[every[0]]))
-            else:
-                test_list.append(int(every[0]))
-        test_list.sort()
-        print(test_list)
-        for i in range (len(test_list) - 1):
-            if test_list[i + 1] == test_list[i] + 1:
-                return True 
-            else:
-                return False
+    for every in hand:
+        if every[0] == 'A':
+            test_list.append(int(converters[every[0]]))
+        elif every[0] == 'J':
+            test_list.append(int(converters[every[0]]))
+        elif every[0] == 'Q':
+            test_list.append(int(converters[every[0]]))
+        elif every[0] == 'K':
+            test_list.append(int(converters[every[0]]))
+        elif every[0] == 'T':
+            test_list.append(int(converters[every[0]]))
+        else:
+            test_list.append(int(every[0]))
+    test_list.sort()
+    print(test_list)
+    for i in range (len(test_list) - 1):
+        if test_list[i + 1] == test_list[i] + 1:
+            return True 
+        else:
+            return False
 
 
 def is_flush(hand):
@@ -49,13 +48,12 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     test_list = []
-    for card in HANDS:
-        for every in card:
-            test_list.append(every[1])
-        if test_list.count(test_list[0]) == len(test_list):
-            return True
-        else:
-            return False
+    for card in hand:
+        test_list.append(every[1])
+    if test_list.count(test_list[0]) == len(test_list):
+        return True
+    else:
+        return False
 
 def hand_rank(hand):
     '''
