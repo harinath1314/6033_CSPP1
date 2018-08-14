@@ -1,3 +1,4 @@
+import constant
 '''
     Write a program to evaluate poker hands and determine the winner
     Read about poker hands here.
