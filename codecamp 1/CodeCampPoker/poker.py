@@ -32,7 +32,7 @@ def is_straight(hand):
     test_list.sort()
     for i in range (len(test_list) - 1):
         if test_list[i + 1] == test_list[i] + 1:
-            return True 
+            return True
         else:
             return False
 
@@ -51,8 +51,7 @@ def is_flush(hand):
         test_list.append(card[1])
     if test_list.count(test_list[0]) == len(test_list):
         return True
-    else:
-        return False
+    return False
 
 def hand_rank(hand):
     '''
