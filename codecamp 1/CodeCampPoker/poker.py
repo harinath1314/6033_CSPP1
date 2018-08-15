@@ -1,5 +1,3 @@
-import constant
-#converters = {'A':14, 'J':13, 'Q':12, 'K':11, 'T':10}
 '''
     Write a program to evaluate poker hands and determine the winner
     Read about poker hands here.
@@ -22,7 +20,7 @@ def is_four_of_kind(hand):
 def is_full_house(hand):
     '''
     input set of cards
-    ouput true if 2 cards and 3 cards are of same face value 
+    ouput true if 2 cards and 3 cards are of same face value
     '''
     test_list = []
     freq_dict = []
@@ -46,7 +44,7 @@ def is_three_of_kind(hand):
     for danis in test_list:
         freq_dict.append(test_list.count(danis))
     if max(freq_dict) == 3:
-       return True
+        return True
     return False
 def is_two_pair(hand):
     '''
@@ -58,7 +56,7 @@ def is_two_pair(hand):
     for card in hand:
         test_list.append(card[0])
     if len(set(test_list)) == 3:
-        return True 
+        return True
     return False
 def is_one_pair(hand):
     '''
@@ -70,7 +68,7 @@ def is_one_pair(hand):
     for card in hand:
         test_list.append(card[0])
     if len(set(test_list)) == 4:
-        return True 
+        return True
     return False
 def is_straight(hand):
     '''
@@ -186,7 +184,3 @@ if __name__ == "__main__":
         HANDS.append(ha)
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
-
-
-
-
