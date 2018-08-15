@@ -103,21 +103,21 @@ def hand_rank(hand):
     '''
     if is_flush(hand) and is_straight(hand):
         return 9
-    elif is_four_of_kind:
+    elif is_four_of_kind(hand):
         return 8
-    elif is_full_house:
+    elif is_full_house(hand):
         return 7
-    elif is_straight:
+    elif is_straight(hand):
         return 6
-    elif is_flush:
+    elif is_flush(hand):
         return 5
-    elif is_three_of_kind:
+    elif is_three_of_kind(hand):
         return 4
-    elif is_two_pair:
+    elif is_two_pair(hand):
         return 3
-    elif is_one_pair:
+    elif is_one_pair(hand):
         return 2
-    elif is_high_word:
+    elif is_high_word(hand):
         return 1
     return 0
 
@@ -169,15 +169,6 @@ if __name__ == "__main__":
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
 
-# COUNT = int(input())
-# # iterate through the test cases to set up hands list
-# HANDS = []
-# for x in range(COUNT):
-#     line = input()
-#     ha = line.split(" ")
-#     HANDS.append(ha)
-# # test the poker function to see how it works
-# print(' '.join(poker(HANDS)))
 
 
 
