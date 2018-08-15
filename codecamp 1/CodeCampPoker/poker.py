@@ -22,7 +22,19 @@ def is_four_of_kind(hand):
         return False
 
 def is_full_house(hand):
-    pass
+    test_list = []
+    freq_dict = []
+    for card in hand:
+        test_list.append(card[0])
+    for x in test_list:
+        freq_dict.append(test_list.count(x))
+    sorted(freq_dict)
+    if freq_dict==[2, 3]:
+        return True
+    return False
+
+
+    
 def is_three_of_kind(hand):
     '''
     input is a hand of five cards
@@ -46,9 +58,9 @@ def is_two_pair(hand):
         return True 
     return False
         
-def is_one_pair(hand):
+# def is_one_pair(hand):
     
-def is_high_word(hand):
+# def is_high_word(hand):
     
 def is_straight(hand):
     '''
