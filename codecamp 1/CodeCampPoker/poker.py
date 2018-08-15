@@ -20,8 +20,11 @@ def is_four_of_kind(hand):
         return True
     else:
         return False
-
 def is_full_house(hand):
+    '''
+    input set of cards
+    ouput true if 2 cards and 3 cards are of same face value 
+    '''
     test_list = []
     freq_dict = []
     for card in hand:
@@ -29,12 +32,9 @@ def is_full_house(hand):
     for x in test_list:
         freq_dict.append(test_list.count(x))
     sorted(freq_dict)
-    if freq_dict==[2, 3]:
+    if freq_dict == [2, 3]:
         return True
     return False
-
-
-    
 def is_three_of_kind(hand):
     '''
     input is a hand of five cards
@@ -51,21 +51,29 @@ def is_three_of_kind(hand):
     else:
         return False
 def is_two_pair(hand):
-    test_list=[]
+    '''
+    if input set of cards contains two pairs of cards
+    with same facevalue
+    output id true
+    '''
+    test_list = []
     for card in hand:
         test_list.append(card[0])
-    if len(set(test_list))==3:
+    if len(set(test_list)) == 3:
         return True 
     return False
-        
 def is_one_pair(hand):
-    test_list=[]
+    '''
+    if input set of cards contains only pairs of cards
+    with same facevalue
+    output id true
+    '''
+    test_list = []
     for card in hand:
         test_list.append(card[0])
-    if len(set(test_list))==4:
+    if len(set(test_list)) == 4:
         return True 
     return False
-    
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -97,8 +105,6 @@ def is_straight(hand):
             return True
         else:
             return False
-
-
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -114,7 +120,6 @@ def is_flush(hand):
     if test_list.count(test_list[0]) == len(test_list):
         return True
     return False
-
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -140,8 +145,6 @@ def hand_rank(hand):
     elif is_one_pair(hand):
         return 2
     return 0
-
-
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
     # Each card is coded as a 2 character string. Example Kind of Hearts is KH
@@ -157,7 +160,6 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
@@ -176,7 +178,6 @@ def poker(hands):
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
     return max(hands, key=hand_rank)
-
 if __name__ == "__main__":
     # read the number of test cases
     COUNT = int(input())
