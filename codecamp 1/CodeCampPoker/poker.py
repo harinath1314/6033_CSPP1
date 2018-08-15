@@ -18,7 +18,8 @@ def is_four_of_kind(hand):
         freq_dict.append(test_list.count(x))
     if max(freq_dict) >= 4:
         return True
-    return False
+    else:
+        return False
 
 def is_full_house(hand):
     pass
@@ -34,8 +35,9 @@ def is_three_of_kind(hand):
     for x in test_list:
         freq_dict.append(test_list.count(x))
     if max(freq_dict) == 3:
-        return True
-    return False
+       return True
+    else:
+        return False
 def is_two_pair(hand):
     pass
 def is_one_pair(hand):
