@@ -58,9 +58,13 @@ def is_two_pair(hand):
         return True 
     return False
         
-# def is_one_pair(hand):
-    
-# def is_high_word(hand):
+def is_one_pair(hand):
+    test_list=[]
+    for card in hand:
+        test_list.append(card[0])
+    if len(set(test_list))==4:
+        return True 
+    return False
     
 def is_straight(hand):
     '''
