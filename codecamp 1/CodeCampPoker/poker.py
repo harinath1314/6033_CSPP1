@@ -10,14 +10,12 @@ def is_four_of_kind(hand):
     freq_dict=[]
     for card in hand:
         test_list.append(card[0])
-    print(test_list)
     for x in test_list:
         freq_dict.append(test_list.count(x))
-    print freq_dict
     if max(freq_dict)>=4:
         return True
     return False
-        
+
 def is_full_house(hand):
     pass
 def is_three_of_kind(hand):
@@ -25,10 +23,8 @@ def is_three_of_kind(hand):
     freq_dict=[]
     for card in hand:
         test_list.append(card[0])
-    print(test_list)
     for x in test_list:
         freq_dict.append(test_list.count(x))
-    print freq_dict
     if max(freq_dict)==3:
         return True
     return False
