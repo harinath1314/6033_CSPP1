@@ -1,10 +1,43 @@
 import constant
+converters = {'A':14, 'J':13, 'Q':12, 'K':11, 'T':10}
 '''
     Write a program to evaluate poker hands and determine the winner
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-
+def is_four_of_kind(hand):
+    test_list=[]
+    freq_dict=[]
+    for card in hand:
+        test_list.append(card[0])
+    print(test_list)
+    for x in test_list:
+        freq_dict.append(test_list.count(x))
+    print freq_dict
+    if max(freq_dict)>=4:
+        return True
+    return False
+        
+def is_full_house(hand):
+    pass
+def is_three_of_kind(hand):
+    test_list=[]
+    freq_dict=[]
+    for card in hand:
+        test_list.append(card[0])
+    print(test_list)
+    for x in test_list:
+        freq_dict.append(test_list.count(x))
+    print freq_dict
+    if max(freq_dict)==3:
+        return True
+    return False
+def is_two_pair(hand):
+    pass
+def is_one_pair(hand):
+    pass
+def is_high_word(hand):
+    pass
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -16,7 +49,6 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     test_list = []
-    converters = {'A':14, 'J':13, 'Q':12, 'K':11, 'T':10}
     for every in hand:
         if every[0] == 'A':
             test_list.append(int(converters[every[0]]))
@@ -62,13 +94,25 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
-    if is_flush(hand) and is_straight(hand):
-        return constant.THREE
+    if is_four_of_kind:
+        return 8
+    elif is_full_house:
+        return 7
+    elif is_three_of_kind:
+        return 4
+    elif is_two_pair:
+        return 3
+    elif is_one_pair:
+        return 2
+    elif is_flush(hand) and is_straight(hand):
+        return 9
     elif is_flush:
-        return constant.TWO
+        return 5
     elif is_straight:
-        return constant.ONE
-    return constant.ZERO
+        return 6
+    elif is_high_word:
+        return 1
+    return 0
 
 
     # By now you should have seen the way a card is represented.
