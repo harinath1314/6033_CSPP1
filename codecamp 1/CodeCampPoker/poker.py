@@ -47,9 +47,9 @@ def is_two_pair(hand):
     return False
         
 def is_one_pair(hand):
-    pass
+    
 def is_high_word(hand):
-    pass
+    
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
