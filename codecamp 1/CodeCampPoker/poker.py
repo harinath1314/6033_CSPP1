@@ -1,5 +1,5 @@
 import constant
-converters = {'A':14, 'J':13, 'Q':12, 'K':11, 'T':10}
+#converters = {'A':14, 'J':13, 'Q':12, 'K':11, 'T':10}
 '''
     Write a program to evaluate poker hands and determine the winner
     Read about poker hands here.
