@@ -6,26 +6,34 @@ converters = {'A':14, 'J':13, 'Q':12, 'K':11, 'T':10}
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 def is_four_of_kind(hand):
-    test_list=[]
-    freq_dict=[]
+    '''
+    input is a hand of five cards
+    output is true if four cards have same face value
+    '''
+    test_list = []
+    freq_dict = []
     for card in hand:
         test_list.append(card[0])
     for x in test_list:
         freq_dict.append(test_list.count(x))
-    if max(freq_dict)>=4:
+    if max(freq_dict) >= 4:
         return True
     return False
 
 def is_full_house(hand):
     pass
 def is_three_of_kind(hand):
-    test_list=[]
-    freq_dict=[]
+    '''
+    input is a hand of five cards
+    output is true if four cards have same face value
+    '''
+    test_list = []
+    freq_dict = []
     for card in hand:
         test_list.append(card[0])
     for x in test_list:
         freq_dict.append(test_list.count(x))
-    if max(freq_dict)==3:
+    if max(freq_dict) == 3:
         return True
     return False
 def is_two_pair(hand):
