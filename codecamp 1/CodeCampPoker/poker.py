@@ -5,39 +5,39 @@ import constant
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-def is_four_of_kind(hand):
-    '''
-    input is a hand of five cards
-    output is true if four cards have same face value
-    '''
-    test_list = []
-    freq_dict = []
-    for card in hand:
-        test_list.append(card[0])
-    for x in test_list:
-        freq_dict.append(test_list.count(x))
-    if max(freq_dict) >= 4:
-        return True
-    else:
-        return False
+# def is_four_of_kind(hand):
+#     '''
+#     input is a hand of five cards
+#     output is true if four cards have same face value
+#     '''
+#     test_list = []
+#     freq_dict = []
+#     for card in hand:
+#         test_list.append(card[0])
+#     for x in test_list:
+#         freq_dict.append(test_list.count(x))
+#     if max(freq_dict) >= 4:
+#         return True
+#     else:
+#         return False
 
-def is_full_house(hand):
-    pass
-def is_three_of_kind(hand):
-    '''
-    input is a hand of five cards
-    output is true if four cards have same face value
-    '''
-    test_list = []
-    freq_dict = []
-    for card in hand:
-        test_list.append(card[0])
-    for x in test_list:
-        freq_dict.append(test_list.count(x))
-    if max(freq_dict) == 3:
-       return True
-    else:
-        return False
+# def is_full_house(hand):
+#     pass
+# def is_three_of_kind(hand):
+#     '''
+#     input is a hand of five cards
+#     output is true if four cards have same face value
+#     '''
+#     test_list = []
+#     freq_dict = []
+#     for card in hand:
+#         test_list.append(card[0])
+#     for x in test_list:
+#         freq_dict.append(test_list.count(x))
+#     if max(freq_dict) == 3:
+#        return True
+#     else:
+#         return False
 def is_two_pair(hand):
     pass
 def is_one_pair(hand):
