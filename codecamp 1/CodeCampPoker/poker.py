@@ -39,7 +39,13 @@ def is_three_of_kind(hand):
     else:
         return False
 def is_two_pair(hand):
-    pass
+    test_list=[]
+    for card in hand:
+        test_list.append(card[0])
+    if len(set(test_list))==3:
+        return True 
+    return False
+        
 def is_one_pair(hand):
     pass
 def is_high_word(hand):
