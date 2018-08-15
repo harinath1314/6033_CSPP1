@@ -169,15 +169,15 @@ if __name__ == "__main__":
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
 
-COUNT = int(input())
-# iterate through the test cases to set up hands list
-HANDS = []
-for x in range(COUNT):
-    line = input()
-    ha = line.split(" ")
-    HANDS.append(ha)
-# test the poker function to see how it works
-print(' '.join(poker(HANDS)))
+# COUNT = int(input())
+# # iterate through the test cases to set up hands list
+# HANDS = []
+# for x in range(COUNT):
+#     line = input()
+#     ha = line.split(" ")
+#     HANDS.append(ha)
+# # test the poker function to see how it works
+# print(' '.join(poker(HANDS)))
 
 
 
