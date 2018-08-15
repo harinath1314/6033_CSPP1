@@ -99,7 +99,9 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
-    if is_four_of_kind:
+    elif is_flush(hand) and is_straight(hand):
+        return 9
+    elif is_four_of_kind:
         return 8
     elif is_full_house:
         return 7
@@ -109,8 +111,6 @@ def hand_rank(hand):
         return 3
     elif is_one_pair:
         return 2
-    elif is_flush(hand) and is_straight(hand):
-        return 9
     elif is_flush:
         return 5
     elif is_straight:
