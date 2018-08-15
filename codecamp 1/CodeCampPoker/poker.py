@@ -139,8 +139,6 @@ def hand_rank(hand):
         return 3
     elif is_one_pair(hand):
         return 2
-    elif is_high_word(hand):
-        return 1
     return 0
 
 
