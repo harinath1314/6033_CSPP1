@@ -14,12 +14,11 @@ def is_four_of_kind(hand):
     freq_dict = []
     for card in hand:
         test_list.append(card[0])
-    for x in test_list:
-        freq_dict.append(test_list.count(x))
+    for x_s in test_list:
+        freq_dict.append(test_list.count(x_s))
     if max(freq_dict) >= 4:
         return True
-    else:
-        return False
+    return False
 def is_full_house(hand):
     '''
     input set of cards
@@ -29,8 +28,8 @@ def is_full_house(hand):
     freq_dict = []
     for card in hand:
         test_list.append(card[0])
-    for x in test_list:
-        freq_dict.append(test_list.count(x))
+    for dani in test_list:
+        freq_dict.append(test_list.count(dani))
     sorted(freq_dict)
     if freq_dict == [2, 3]:
         return True
@@ -44,12 +43,11 @@ def is_three_of_kind(hand):
     freq_dict = []
     for card in hand:
         test_list.append(card[0])
-    for x in test_list:
-        freq_dict.append(test_list.count(x))
+    for danis in test_list:
+        freq_dict.append(test_list.count(danis))
     if max(freq_dict) == 3:
        return True
-    else:
-        return False
+    return False
 def is_two_pair(hand):
     '''
     if input set of cards contains two pairs of cards
@@ -103,8 +101,7 @@ def is_straight(hand):
     for i in range(len(test_list) - 1):
         if test_list[i + 1] == test_list[i] + 1:
             return True
-        else:
-            return False
+        return False
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
