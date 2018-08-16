@@ -71,7 +71,6 @@ def is_one_pair(hand):
     for num_freq in test_list:
         if test_list.count(num_freq)==2:
             test_list2.append(num_freq)
-    print(max(test_list2))
     if len(test_list2)==0:
         return False
     return [1,max(test_list2)]
