@@ -132,9 +132,9 @@ def hand_rank(hand):
     elif is_full_house(hand):
         return 7
     elif is_straight(hand):
-        return 6
-    elif is_flush(hand):
         return 5
+    elif is_flush(hand):
+        return 6
     elif is_three_of_kind(hand):
         return 4
     elif is_two_pair(hand):
