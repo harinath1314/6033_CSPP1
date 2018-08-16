@@ -164,9 +164,9 @@ def hand_rank(hand):
         for num_freq in test_list1:
             if test_list1.count(num_freq)==2:
                 test_list2.append(num_freq)
-        if len(test_list2)==0:
+        if not test_list2:
             return False
-        return (max(test_list2)/100)+1
+        return (max(test_list2)/int(100))+1
 
     return is_high_card(hand)
 
