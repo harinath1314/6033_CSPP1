@@ -160,9 +160,9 @@ def hand_rank(hand):
         test_list1 = []
         test_list2 = []
         for card in hand:
-            test_list.append(card[0])
-        for num_freq in test_list:
-            if test_list.count(num_freq)==2:
+            test_list1.append(card[0])
+        for num_freq in test_list1:
+            if test_list1.count(num_freq)==2:
                 test_list2.append(num_freq)
         if len(test_list2)==0:
             return False
