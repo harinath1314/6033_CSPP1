@@ -98,8 +98,10 @@ def is_straight(hand):
     test_list.sort()
     for i in range(len(test_list) - 1):
         if test_list[i + 1] == test_list[i] + 1:
-            return True
-        return False
+            pass
+        else:
+            return False
+    return True
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
