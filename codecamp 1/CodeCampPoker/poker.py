@@ -159,7 +159,7 @@ def hand_rank(hand):
     elif is_two_pair(hand):
         return 3
     elif is_one_pair(hand):
-        return [2, freq_card(hand)]
+        return (2, freq_card(hand))
     return is_high_card(hand)
 
 def poker(hands):
