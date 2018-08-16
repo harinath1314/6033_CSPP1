@@ -73,7 +73,7 @@ def is_one_pair(hand):
             test_list2.append(num_freq)
     if len(test_list2)==0:
         return False
-    return ,max(test_list2)
+    return max(test_list2)
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
