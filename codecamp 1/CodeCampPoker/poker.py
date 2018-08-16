@@ -72,8 +72,8 @@ def is_one_pair(hand):
         if test_list.count(num_freq) == 2:
             test_list2.append(num_freq)
     if len(test_list2) == 0:
-        return True
-    return False
+        return False
+    return True
 
 def is_straight(hand):
     '''
