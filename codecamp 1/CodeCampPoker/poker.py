@@ -157,17 +157,7 @@ def hand_rank(hand):
     elif is_two_pair(hand):
         return 3
     elif is_one_pair(hand):
-        test_list1 = []
-        test_list2 = []
-        for card in hand:
-            test_list1.append(card[0])
-        for num_freq in test_list1:
-            if test_list1.count(num_freq)==2:
-                test_list2.append(num_freq)
-        if not test_list2:
-            return False
-        return (max(test_list2)/int(100))+1
-
+        return 1 
     return is_high_card(hand)
 
 def poker(hands):
