@@ -80,19 +80,19 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    converters = {'A':14, 'J':13, 'Q':12, 'K':11, 'T':10}
+    #Converters = {'A':14, 'J':13, 'Q':12, 'K':11, 'T':10}
     test_list = []
     for every in hand:
         if every[0] == 'A':
-            test_list.append(int(converters[every[0]]))
+            test_list.append(int(Converters[every[0]]))
         elif every[0] == 'J':
-            test_list.append(int(converters[every[0]]))
+            test_list.append(int(Converters[every[0]]))
         elif every[0] == 'Q':
-            test_list.append(int(converters[every[0]]))
+            test_list.append(int(Converters[every[0]]))
         elif every[0] == 'K':
-            test_list.append(int(converters[every[0]]))
+            test_list.append(int(Converters[every[0]]))
         elif every[0] == 'T':
-            test_list.append(int(converters[every[0]]))
+            test_list.append(int(Converters[every[0]]))
         else:
             test_list.append(int(every[0]))
     test_list.sort()
@@ -118,15 +118,26 @@ def is_flush(hand):
         return True
     return False
 def test_hand_value(hand):
-    test_list=[]
-    for card in hand:
-        test_list.append(card[0])
-    return max(test_list)
-def is_high_card(hands):
+    '''
+    retrn hand values
+    '''
+    # test_list = []
+    # for card in hand:
+    #     test_list.append(card[0])
+    # return max(test_list)
+
+def is_high_card(hand):
     '''
     returns the hand with high card value
     '''
-    return max(hands, key=test_hand_value)
+    test_list = []
+    for card in hand:
+        if card[0] in ['J','K','Q','A','T']:
+            test_list.append(Converters[card[0]]/int(10))
+        else:
+            test_list.append(int(card[0])/int(10))
+    return max(test_list)
+
 
 
 def hand_rank(hand):
@@ -153,22 +164,8 @@ def hand_rank(hand):
         return 3
     elif is_one_pair(hand):
         return 2
-    return 0
-    # By now you should have seen the way a card is represented.
-    # If you haven't then go the main or poker function and print the hands
-    # Each card is coded as a 2 character string. Example Kind of Hearts is KH
-    # First character for face value 2,3,4,5,6,7,8,9,T,J,Q,K,A
-    # Second character for the suit S (Spade), H (Heart), D (Diamond), C (Clubs)
-    # What would be the logic to determine if a hand is a straight or flush?
-    # Let's not think about the logic in the hand_rank function
-    # Instead break it down into two sub functions is_straight and is_flush
+    return is_high_card(hand)
 
-    # check for straight, flush and straight flush
-    # best hand of these 3 would be a straight flush with the return value 3
-    # the second best would be a flush with the return value 2
-    # third would be a straight with the return value 1
-    # any other hand would be the fourth best with the return value 0
-    # max in poker function uses these return values to select the best hand
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
@@ -179,15 +176,10 @@ def poker(hands):
 
         Output: Return the winning poker hand
     '''
-    # the line below may be new to you
-    # max function is provided by python library
-    # learn how it works, in particular the key argument, from the link
-    # https://www.programiz.com/python-programming/methods/built-in/max
-    # hand_rank is a function passed to max
-    # hand_rank takes a hand and returns its rank
-    # max uses the rank returned by hand_rank and returns the best hand
     return max(hands, key=hand_rank)
-converters = {'A':14, 'J':13, 'Q':12, 'K':11, 'T':10}
+Converters = {'A':14, 'J':13, 'Q':12, 'K':11, 'T':10}
+
+
 if __name__ == "__main__":
     # read the number of test cases
     COUNT = int(input())
@@ -199,6 +191,5 @@ if __name__ == "__main__":
         HANDS.append(ha)
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
-    if poker(HANDS) == 0:
-        print(' '.join(is_high_card(HANDS)))
+
 
