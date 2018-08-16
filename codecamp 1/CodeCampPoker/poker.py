@@ -117,8 +117,16 @@ def is_flush(hand):
     if test_list.count(test_list[0]) == len(test_list):
         return True
     return False
-def is_high_card(hand):
-    pass
+def test_hand_value(hand):
+    test_list=[]
+    for card in hand:
+        test_list.append(card[0])
+    return max(test_list)
+def is_high_card(hands):
+    '''
+    returns the hand with high card value
+    '''
+    return max(hands, key=test_hand_value)
 
 
 def hand_rank(hand):
@@ -145,8 +153,6 @@ def hand_rank(hand):
         return 3
     elif is_one_pair(hand):
         return 2
-    elif is_high_card(hand):
-        return 1
     return 0
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
@@ -193,3 +199,6 @@ if __name__ == "__main__":
         HANDS.append(ha)
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
+    if poker(hands)==0:
+        print(' '.join(is_high_card(HANDS)))
+
