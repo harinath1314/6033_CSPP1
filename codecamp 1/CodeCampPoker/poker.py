@@ -67,13 +67,16 @@ def is_one_pair(hand):
     test_list = []
     for card in hand:
         test_list.append(card[0])
-    def freq_card(test_list):
-        for num_freq in test_list:
-            if test_list.count(num_freq)==2:
-                return num_freq
     if len(set(test_list)) == 4:
         return True
     return False
+def freq_card(hand):
+    test_list = []
+    for card in hand:
+        test_list.append(card[0])
+    for num_freq in test_list:
+        if test_list.count(num_freq)==2:
+            return num_freq
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -156,7 +159,7 @@ def hand_rank(hand):
     elif is_two_pair(hand):
         return 3
     elif is_one_pair(hand):
-        return [2,freq_card(test_list)]
+        return (2, freq_card(test_list)]
     return is_high_card(hand)
 
 def poker(hands):
