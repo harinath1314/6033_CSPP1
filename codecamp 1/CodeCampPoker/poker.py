@@ -80,7 +80,6 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    #Converters = {'A':14, 'J':13, 'Q':12, 'K':11, 'T':10}
     test_list = []
     for every in hand:
         if every[0] == 'A':
@@ -117,14 +116,6 @@ def is_flush(hand):
     if test_list.count(test_list[0]) == len(test_list):
         return True
     return False
-def test_hand_value(hand):
-    '''
-    retrn hand values
-    '''
-    # test_list = []
-    # for card in hand:
-    #     test_list.append(card[0])
-    # return max(test_list)
 
 def is_high_card(hand):
     '''
@@ -137,8 +128,6 @@ def is_high_card(hand):
         else:
             test_list.append(int(card[0])/int(10))
     return max(test_list)
-
-
 
 def hand_rank(hand):
     '''
@@ -179,17 +168,13 @@ def poker(hands):
     return max(hands, key=hand_rank)
 Converters = {'A':14, 'J':13, 'Q':12, 'K':11, 'T':10}
 
-
 if __name__ == "__main__":
-    # read the number of test cases
     COUNT = int(input())
-    # iterate through the test cases to set up hands list
     HANDS = []
     for x in range(COUNT):
         line = input()
         ha = line.split(" ")
         HANDS.append(ha)
-    # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
 
 
