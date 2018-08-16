@@ -52,9 +52,9 @@ def is_two_pair(hand):
     with same facevalue
     output id true
     '''
-    test_list = [card for card in hand test_list.append(card[0])]
-    # for card in hand:
-    #     test_list.append(card[0])
+    test_list = []
+    for card in hand:
+        test_list.append(card[0])
     if len(set(test_list)) == 3:
         return True
     return False
@@ -64,9 +64,9 @@ def is_one_pair(hand):
     with same facevalue
     output id true
     '''
-    test_list = [card for card in hand test_list.append(card[0])]
-    # for card in hand:
-    #     test_list.append(card[0])
+    test_list = []
+    for card in hand:
+        test_list.append(card[0])
     if len(set(test_list)) == 4:
         return True
     return False
@@ -110,9 +110,9 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    test_list = [card for card in hand test_list.append(card[1])]
-    # for card in hand:
-    #     test_list.append(card[1])
+    test_list = []
+    for card in hand:
+        test_list.append(card[1])
     if test_list.count(test_list[0]) == len(test_list):
         return True
     return False
