@@ -36,14 +36,14 @@ def main():
     '''
         take two inputs and call the similarity function
     '''
-    input1 = input()
+    input1 = input().lower()
     input1 = re.sub(r'[^a-z\s]', '', input1)
 
-    clean_1 = input1.lower().split()
+    clean_1 = input1.split()
 
-    input2 = input()
+    input2 = input().lower()
     input2 = re.sub(r'[^a-z\s]', '', input2)
-    clean_2 = input2.lower().split()
+    clean_2 = input2.split()
 
     stop_words = load_stopwords(STOP_FILE)
     clean_2 = [word.strip() for word in clean_2 if word.strip() not in stop_words]
