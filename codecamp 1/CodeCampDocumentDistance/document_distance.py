@@ -26,8 +26,8 @@ def load_stopwords(filename):
         loads stop words from a file and returns a dictionary
     '''
     stopwords = []
-    with open(filename, 'r') as filename_:
-        for i in filename_:
+    with open(filename, 'r') as data:
+        for i in data:
             stopwords.append(i.strip())
     return stopwords
 
@@ -38,20 +38,20 @@ def main():
     '''
     input1 = input()
     for hari in input1:
-        if hari in "<>?,.!;':[]{|@#$%^&*()_,.1234567890`~/":
+        if hari in "<>?,.!;':[]{}|@#$%^&*()_,.1234567890`~/":
             input1 = input1.replace(hari, '')
 
-    clean_1 = (input1.lower().strip()).split()
+    clean_1 = input1.lower().split()
 
     input2 = input()
     for hari in input2:
-        if hari in ",./<>?';:![]{|@#$%^&*()_,.1234567890`~/":
+        if hari in ",./<>?';:![]{}|@#$%^&*()_,.1234567890`~/":
             input2 = input2.replace(hari, '')
-    clean_2 = (input2.lower().strip()).split()
+    clean_2 = input2.lower().split()
 
     stop_words = load_stopwords(STOP_FILE)
-    clean_2 = [word for word in clean_2 if word not in stop_words]
-    clean_1 = [word_ for word_ in clean_1 if word_ not in stop_words]
+    clean_2 = [word.strip() for word in clean_2 if word.strip() not in stop_words]
+    clean_1 = [word.strip() for word in clean_1 if word.strip() not in stop_words]
     cleande_words = list(set().union(clean_1, clean_2))
     print(similarity(clean_1, clean_2, cleande_words))
 if __name__ == '__main__':
