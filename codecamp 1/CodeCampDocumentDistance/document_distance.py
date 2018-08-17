@@ -49,7 +49,7 @@ def main():
     clean_2 = [word.strip() for word in clean_2 if word.strip() not in stop_words]
     clean_1 = [word.strip() for word in clean_1 if word.strip() not in stop_words]
     cleande_words = list(set().union(set(clean_1), set(clean_2)))
-    print(cleande_words)
+    print(len(cleande_words))
     print(similarity(clean_1, clean_2, cleande_words))
 if __name__ == '__main__':
     main()
