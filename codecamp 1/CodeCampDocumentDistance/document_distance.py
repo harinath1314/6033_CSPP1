@@ -57,7 +57,6 @@ def main():
     clean_2=[word for word in clean_2 if word not in stop_words]
     clean_1=[word_ for word_ in clean_1 if word_ not in stop_words]
     cleande_words=list(set().union(clean_1,clean_2))
-    print(cleande_words)
     print(similarity(clean_1, clean_2,cleande_words))
 if __name__ == '__main__':
     main()
