@@ -16,9 +16,9 @@ def similarity(input1, input2, cleande_words):
     for keys in dictionary_:
         temp1 += dictionary_[keys][0] * dictionary_[keys][1]
     for keys in dictionary_:
-        temp2 += dictionary_[keys][0] * 2
+        temp2 += dictionary_[keys][0] **2
     for keys in dictionary_:
-        temp3 += dictionary_[keys][1] * 2
+        temp3 += dictionary_[keys][1] **2
     return temp1/math.sqrt(temp2 * temp3)
 
 def load_stopwords(filename):
