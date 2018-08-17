@@ -38,14 +38,14 @@ def main():
     '''
     input1 = input()
     for hari in input1:
-        if hari in "<>?,.!;':[]\{}|@#$%^&*()_,.1234567890`~/":
+        if hari in "<>?,.!;':[]{|@#$%^&*()_,.1234567890`~/":
             input1 = input1.replace(hari, '')
 
     clean_1 = (input1.lower().strip()).split()
 
     input2 = input()
     for hari in input2:
-        if hari in ",./<>?';:![]\}{|@#$%^&*()_,.1234567890`~/":
+        if hari in ",./<>?';:![]{|@#$%^&*()_,.1234567890`~/":
             input2 = input2.replace(hari, '')
     clean_2 = (input2.lower().strip()).split()
 
