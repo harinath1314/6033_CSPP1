@@ -1,16 +1,15 @@
 '''
     Document Distance - A plagarism calculator
 '''
-import re
 import math
-stop_file = 'stopwords.txt'
-def similarity(input1, input2,cleande_words):
+STOP_FILE = 'stopwords.txt'
+def similarity(input1, input2, cleande_words):
     '''
         Compute the document distance as given in the PDF
     '''
     temp1 = 0
     temp2 = 0
-    temp3 =0  
+    temp3 = 0
     dictionary_ = {}
     for o_o_word in cleande_words:
         dictionary_[o_o_word] = [int(input1.count(o_o_word)), int(input2.count(o_o_word))]
@@ -39,18 +38,18 @@ def main():
     '''
     input1 = input()
     for hari in input1:
-        if hari in "!@#$%^&*()_,.1234567890`~/":
-            input1 = input1.replace(hari,'')
+        if hari in "<>?,.!;':[]\{}|@#$%^&*()_,.1234567890`~/":
+            input1 = input1.replace(hari, '')
 
     clean_1 = (input1.lower().strip()).split()
 
     input2 = input()
     for hari in input2:
-        if hari in "!@#$%^&*()_,.1234567890`~/":
+        if hari in ",./<>?';:![]\}{|@#$%^&*()_,.1234567890`~/":
             input2 = input2.replace(hari, '')
     clean_2 = (input2.lower().strip()).split()
 
-    stop_words = load_stopwords(stop_file)
+    stop_words = load_stopwords(STOP_FILE)
     clean_2 = [word for word in clean_2 if word not in stop_words]
     clean_1 = [word_ for word_ in clean_1 if word_ not in stop_words]
     cleande_words = list(set().union(clean_1, clean_2))
