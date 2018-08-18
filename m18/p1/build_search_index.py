@@ -44,8 +44,8 @@ def build_search_index(docs, docs2):
         Process the docs step by step as given below
     '''
     for one_doc in docs:
-        print(one_doc,"-", [(docs2.index(one_), docs2[one_].count(one_doc)) for one_ in docs2 ])
-    return 
+        print(one_doc,"-", [(docs2.index(one_), docs2[one_].count(one_)) for one_ in docs2 ])
+    pass
         
 def main():
     '''
@@ -66,7 +66,7 @@ def main():
 
     no_stop_list = [word for word in all_words_in_list if word not in stopers]
     # call print to display the search index
-    print(build_search_index(no_stop_list, all_wordlist_in_list))
+    build_search_index(no_stop_list, all_wordlist_in_list)
 
 if __name__ == '__main__':
     main()
