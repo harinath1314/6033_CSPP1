@@ -45,7 +45,7 @@ def build_search_index(docs, docs2):
     '''
     for one_doc in docs:
         print(one_doc,"-", [(docs2.index(one_), docs2[one_].count(one_doc)) for one_ in docs2 ]
-    pass
+    
         
 def main():
     '''
