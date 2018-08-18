@@ -44,7 +44,7 @@ def build_search_index(docs, docs2):
         Process the docs step by step as given below
     '''
     for one_doc in docs:
-        print(one_doc,"-", [(docs2.index(one_word), docs2[one_word].count(one_word)) for one_word in docs2 ])
+        print(one_doc,"-", [(docs2.index(one_), docs2[one_].count(one_doc)) for one_ in docs2 ])
     return 
         
 def main():
