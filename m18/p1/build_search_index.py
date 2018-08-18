@@ -46,9 +46,9 @@ def build_search_index(docs, docs2):
     for one_doc in docs2:
         # print(one_doc, "-", [(docs2.index(one_set), docs2[one_set].count(one_doc))for one_set in docs2])
         while i<= len(docs):
-            print(docs[i], "-", docs2.index(one_doc) one_doc.count(docs[i]))
+            print(docs[i], "-", [(docs2.index(one_doc), one_doc.count(docs[i]))]
             i+=1
-    
+
 
 def main():
     '''
