@@ -23,7 +23,7 @@ def word_list2(documents):
     test_list = []
     for one_str in documents:
         one_str = re.sub(r'[^a-z\s]', '', one_str)
-        new_list=one_str.split()
+        new_list = one_str.split()
         test_list.append(new_list)
     return test_list
 
@@ -46,7 +46,7 @@ def build_search_index(docs, docs2):
     new_dict = {}
     for one_doc in docs:
         for one_set in docs2:
-            new_dict[one_doc] = [(docs.index(one_set), docs2.count(one_doc))]
+            new_dict[one_doc] = [(docs2.index(one_set), docs2.count(one_doc))]
     return new_dict
 
 def main():
