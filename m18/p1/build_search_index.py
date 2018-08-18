@@ -43,24 +43,10 @@ def build_search_index(docs, docs2):
     '''
         Process the docs step by step as given below
     '''
-    
     for one_doc in docs:
         print(one_doc,"-", [(docs2.index(one_word), docs2[one_word].count(one_word)) for one_word in docs2 ]
     return 
         
-
-    # initialize a search index (an empty dictionary)
-
-    # iterate through all the docs
-    # keep track of doc_id which is the list index corresponding the document
-    # hint: use enumerate to obtain the list index in the for loop
-
-        # clean up doc and tokenize to words list
-
-        # add or update the words of the doc to the search index
-
-    # return search index
-
 def main():
     '''
         main function
