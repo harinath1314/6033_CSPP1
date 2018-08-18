@@ -73,7 +73,7 @@ def main():
     no_stop_list = [word for word in all_words_in_list if word not in stopers]
     print(no_stop_list)
     # call print to display the search index
-    build_search_index(no_stop_list, all_wordlist_in_list)
+    print(build_search_index(no_stop_list, all_wordlist_in_list))
 
 if __name__ == '__main__':
     main()
