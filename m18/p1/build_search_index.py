@@ -30,7 +30,7 @@ def load_stopwords(filename):
     with open(filename, 'r') as f_stopwords:
         for line in f_stopwords:
             stopwords[line.strip()] = 0
-    return stopwords
+    return list(stopwords.keys())
 
 def word_list2(text):
     '''
@@ -63,7 +63,8 @@ def build_search_index(docs, docs2):
     '''
     new_dict={}
     for one_doc in docs:
-        new_dict[one_doc]=(docs2.index(one_doc), docs2.count(one_doc) )
+        for one_word in docs2:
+            new_dict[one_doc]=(docs2.index(one_word), docs2.count(one_word) )
     return new_dict
         
 
@@ -102,10 +103,13 @@ def main():
     for i in range(lines):
         documents.append(input())
         i += 1
+    stopwords="stopwords.txt"
+    stopers=load_stopwords(stopwords)
     all_wordlist_in_list=(word_list2(documents))
     all_words_in_list=(word_list(documents))
+    no_stop_list=[word for word in all_words_in_list if word not in stopers]
     # call print to display the search index
-    print_search_index(build_search_index(all_words_in_list, all_wordlist_in_list))
+    print_search_index(build_search_index(no_stop_list, all_wordlist_in_list))
 
 if __name__ == '__main__':
     main()
