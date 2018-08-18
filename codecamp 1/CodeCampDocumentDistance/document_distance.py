@@ -21,7 +21,6 @@ def similarity(input1, input2, cleande_words):
     for keys in dictionary_:
         temp3 += dictionary_[keys][1] **2
     return temp1/math.sqrt(temp2 * temp3)
-
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
@@ -31,8 +30,6 @@ def load_stopwords(filename):
         for i in data:
             stopwords.append(i.strip())
     return stopwords
-
-
 def main():
     '''
         take two inputs and call the similarity function
@@ -40,11 +37,9 @@ def main():
     input1 = input().lower()
     input1 = re.sub(r'[^a-z\s]', '', input1)
     clean_1 = input1.split()
-
     input2 = input().lower()
     input2 = re.sub(r'[^a-z\s]', '', input2)
     clean_2 = input2.split()
-
     stop_words = load_stopwords(STOP_FILE)
     clean_2 = [word.strip() for word in clean_2 if word.strip() not in stop_words]
     clean_1 = [word.strip() for word in clean_1 if word.strip() not in stop_words]
