@@ -33,6 +33,9 @@ def load_stopwords(filename):
     return stopwords
 
 def word_list2(text):
+    '''
+    all words in a list
+    '''
     test_list = []
     for one_str in text:
         one_str = re.sub(r'[^a-z\s]', '', one_str)
@@ -60,7 +63,7 @@ def build_search_index(docs, docs2):
     '''
     new_dict={}
     for one_doc in docs:
-        new_dict[one_doc]=(doc2.index(one_doc), doc2.count(one_doc) )
+        new_dict[one_doc]=(docs2.index(one_doc), docs2.count(one_doc) )
     return new_dict
         
 
