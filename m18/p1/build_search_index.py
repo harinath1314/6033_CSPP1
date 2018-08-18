@@ -61,17 +61,11 @@ def main():
     for i in range(lines):
         documents.append(input().lower())
         i += 1
-    print(documents)
     stopwords = "stopwords.txt"
     stopers = load_stopwords(stopwords)
-    print(stopers)
     all_wordlist_in_list = (word_list2(documents))
     all_words_in_list = (word_list(documents))
-    print(all_words_in_list)
-    print(all_wordlist_in_list)
-
     no_stop_list = [word for word in all_words_in_list if word not in stopers]
-    print(no_stop_list)
     # call print to display the search index
     print(build_search_index(no_stop_list, all_wordlist_in_list))
 
