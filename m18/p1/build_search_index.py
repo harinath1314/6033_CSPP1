@@ -43,11 +43,10 @@ def build_search_index(docs, docs2):
     '''
         Process the docs step by step as given below
     '''
-    new_dict = {}
+    
     for one_doc in docs:
-        for one_word in docs2:
-            new_dict[one_doc] = (docs2.index(one_word), docs2.count(one_word) )
-    return new_dict
+        one_doc = [(docs2.index(one_word), docs2[one_word].count(one_word)) for one_word in docs2 ]
+    return one_doc
         
 
     # initialize a search index (an empty dictionary)
@@ -62,8 +61,8 @@ def build_search_index(docs, docs2):
 
     # return search index
 
-# helper function to print the search index
-# use this to verify how the search index looks
+#helper function to print the search index
+#use this to verify how the search index looks
 # def print_search_index(index):
 #     '''
 #         print the search index
@@ -85,13 +84,10 @@ def main():
         i += 1
     stopwords = "stopwords.txt"
     stopers = load_stopwords(stopwords)
-    print(stopers)
     all_wordlist_in_list = (word_list2(documents))
-    print(all_wordlist_in_list)
     all_words_in_list = (word_list(documents))
-    print(all_words_in_list)
+
     no_stop_list = [word for word in all_words_in_list if word not in stopers]
-    print(no_stop_list)
     # call print to display the search index
     print(build_search_index(no_stop_list, all_wordlist_in_list))
 
