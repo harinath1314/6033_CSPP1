@@ -59,7 +59,7 @@ def main():
     lines = int(input())
     # iterate through N times and add documents to the list
     for i in range(lines):
-        documents.append(input())
+        documents.append(input().lower())
         i += 1
     print(documents)
     stopwords = "stopwords.txt"
