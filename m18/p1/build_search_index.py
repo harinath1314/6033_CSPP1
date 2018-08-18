@@ -23,8 +23,8 @@ def word_list2(documents):
     test_list = []
     for one_str in documents:
         one_str = re.sub(r'[^a-z\s]', '', one_str)
-        one_str.split()
-        test_list.append(one_str)
+        new_list=one_str.split()
+        test_list.append(new_list)
     return test_list
 
 def word_list(documents):
