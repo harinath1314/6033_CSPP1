@@ -43,8 +43,12 @@ def build_search_index(docs, docs2):
     '''
         Process the docs step by step as given below
     '''
+    new_dict = {}
     for one_doc in docs:
-        print(one_doc, "-", [(docs2.index(one_), docs2[one_].count(one_doc)) for one_ in docs2])
+        for one_set in docs2:
+            new_dict[one_doc] = [(docs.index(one_set), docs2.count(one_doc))]
+    return new_dict
+
 def main():
     '''
         main function
