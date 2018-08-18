@@ -46,7 +46,7 @@ def build_search_index(docs, docs2):
     
     for one_doc in docs:
         print(one_doc,"-", [(docs2.index(one_word), docs2[one_word].count(one_word)) for one_word in docs2 ]
-    
+    pass
         
 
     # initialize a search index (an empty dictionary)
