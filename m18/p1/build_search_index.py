@@ -46,7 +46,7 @@ def build_search_index(docs, docs2):
     new_dict = {}
     for one_doc in docs:
         for one_set in docs2:
-            new_dict[one_doc] = [(docs2.index[one_set], docs2.count(one_doc))]
+            new_dict[one_doc] = [(docs2.index(one_set), docs2.count(one_doc))]
     return new_dict
 
 def main():
