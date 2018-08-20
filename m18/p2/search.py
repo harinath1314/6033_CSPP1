@@ -39,7 +39,6 @@ def search(search_index, query):
     '''
     s_ino=set()
     query=query.lower().split()
-    print(query)
     for one in query:
         if one in search_index:
             s_ino.add(search_index[one][0][0])
