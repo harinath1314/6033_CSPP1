@@ -42,7 +42,7 @@ def search(search_index, query):
     print(query)
     for one in query:
         if one in search_index:
-            s_ino.add(search_index[one])
+            s_ino.add(search_index[one[0][0]])
     return s_ino
 
 
