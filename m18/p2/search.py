@@ -53,7 +53,7 @@ def process_queries(search_index, queries):
         print the results returned by search function
     '''
     for word in queries:
-        print(search(search_index, query))
+        print(search(search_index, word))
     
 
 def main():
