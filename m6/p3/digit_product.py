@@ -8,11 +8,11 @@ def main():
     '''
     Read any number from the input, store it in variable int_input.
     '''
-    num_= int(input())
-    ans=1
-    for i in (num_):
-        ans=i*(i+1)
+    ans = 0
+    num_ = int(input())
+    while num_ != 0:
+        ans += num_ % 10
+        num_ = num_ // 10
     print(ans)
-
 if __name__ == "__main__":
     main()

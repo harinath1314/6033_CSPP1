@@ -6,7 +6,7 @@ import time
 #
 # Computer chooses a word
 #
-#
+
 def compChooseWord(hand, wordList, n):
     """
     Given a hand and a wordList, find the word that gives 
@@ -80,7 +80,7 @@ def compPlayHand(hand, wordList, n):
         # Otherwise (the input is not a single period):
         else :
             # If the word is not valid:
-            if (not isValidWord(word, hand, wordList)) :
+            if not isValidWord(word, hand, wordList) :
                 print('This is a terrible error! I need to check my own code!')
                 break
             # Otherwise (the word is valid):
@@ -123,12 +123,39 @@ def playGame(wordList):
     4) After the computer or user has played the hand, repeat from step 1
 
     wordList: list (string)
-    """
-    # TO DO... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this when you code this function
 
-        
-#
+    """
+    
+
+    while True:
+        print("choose a player- 'c' for computer and u for user")
+        com_input =input()
+        if com_input == 'u':
+            print('select n to start new game r to resume e to exit')
+            while True:
+                com_input = input()
+                if com_input == 'e':
+                    print('you have been exited from the game')
+                    return
+                elif com_input == 'n':
+                    print("start a new random hand game")
+                    hand = dealHand(HAND_SIZE)
+                    playHand(hand, wordList, HAND_SIZE)
+                elif com_input == 'r':
+                    print("play the last hand again")
+                    playHand(hand, wordList, HAND_SIZE)
+                else:
+                    print("invalid input - please enter a valid input")
+        elif com_input == 'c':
+            print("computer plays the gamem")
+            hand = dealHand(HAND_SIZE)
+            compPlayHand(hand, wordList, HAND_SIZE)
+
+        elif com_input == 'e':
+            return
+        else :
+            print("invalid input")
+
 # Build data structures used for entire session and play game
 #
 if __name__ == '__main__':
