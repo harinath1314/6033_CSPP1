@@ -28,10 +28,11 @@ class intSet(object):
             self.vals.remove(e)
         except:
             raise ValueError(str(e) + ' not found')
-    def intersect(self, setA, setB):
-        for i in self.setA:
-            if self.setA[i] not in setB:
-                self.s=self.s.append(i)
+    def intersect(self, other):
+        self.s = []
+        for i in self.vals:
+            if i in other.vals:
+                self.s.append(i)
         return self.s
 
     def __str__(self):
@@ -62,9 +63,7 @@ def main():
         setA.insert(int(i))
     for j in l2:
         setB.insert(int(j))
-    print(setA)
-    print(setB)
-    print(intSet.intersect(setA, setB))
+    print(setA.intersect(setB))
 
 if __name__== "__main__":
     main()
