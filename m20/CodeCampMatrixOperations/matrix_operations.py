@@ -19,9 +19,9 @@ def mult_matrix(m1_, m2_):
             for j in range(len(m2_[0])):
                 mat_mul[i].append(j)
                 mat_mul[i][j] = 0
-        for i in range(rows):
-            for j in range(columns):
-                for k in range(columns):
+        for i in range(m1_):
+            for j in range(m2_[0]):
+                for k in range(m2_[0]):
                     mat_mul[i][j] += m1_[i][k] * m2_[k][j]
         return mat_mul
     else:
