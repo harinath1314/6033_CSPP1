@@ -20,7 +20,7 @@ def mult_matrix(rows, columns, m1_, m2_):
     for i in range(rows):
         for j in range(columns):
             for k in range(columns):
-                mat_mul[i][j] += m1[i][k] * m2[k][j]
+                mat_mul[i][j] += m1_[i][k] * m2_[k][j]
     return mat_mul
 
 def add_matrix(rows, columns, m1_, m2_):
@@ -40,7 +40,7 @@ def add_matrix(rows, columns, m1_, m2_):
             mat_add[i][j] = 0
     for i in range(rows):
         for j in range(columns):
-            mat_add[i][j] = m1[i][j] + m2[i][j]
+            mat_add[i][j] = m1_[i][j] + m2_[i][j]
     return mat_add
 
 
