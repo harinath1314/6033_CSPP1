@@ -23,7 +23,6 @@ def mult_matrix(rows, columns, m1_, m2_):
                 for j in range(columns):
                     for k in range(columns):
                         mat_mul[i][j] += m1_[i][k] * m2_[k][j]
-            print(mat_mul)
             return mat_mul
     except:
         pass
@@ -49,7 +48,6 @@ def add_matrix(rows, columns, m1_, m2_):
             for i in range(rows):
                 for j in range(columns):
                     mat_add[i][j] = m1_[i][j] + m2_[i][j]
-            print(mat_add)
         return mat_add
     except:
         pass
