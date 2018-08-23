@@ -46,7 +46,6 @@ def add_matrix(rows, columns, m1_, m2_):
                 mat_add[i][j] = m1_[i][j] + m2_[i][j]
         print(mat_add)
         return mat_add
-    except:
 
 
 
