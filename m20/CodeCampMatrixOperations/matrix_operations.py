@@ -64,8 +64,8 @@ def read_matrix(rows, columns):
     for i in range(rows):
         inputt = input().split(' ')
         try:
-            if len(inputt)==len(mat):
-                for j in range(columns):
+            for j in range(columns):
+                if len(inputt)==len(mat[j]):
                     mat[i][j] = int(inputt[j])
         except:
             raise Error("Invalid input for the matrix")
