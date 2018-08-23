@@ -2,7 +2,7 @@
 this pyhton file performs the multoplication and addition of
 two matrices
 '''
-def mult_matrix(rows,columns, m1, m2):
+def mult_matrix(rows, columns, m1_, m2_):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -23,7 +23,7 @@ def mult_matrix(rows,columns, m1, m2):
                 mat_mul[i][j] += m1[i][k] * m2[k][j]
     return mat_mul
 
-def add_matrix(rows, columns, m1, m2):
+def add_matrix(rows, columns, m1_, m2_):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -75,14 +75,12 @@ def main():
     (rows, columns) = (inpu.split(','))
     row = int(rows)
     column = int(columns)
-    
     m1_ = read_matrix(row, column)
     # read matrix 2
     inpu = input()
     (rows, columns) = (inpu.split(','))
     row = int(rows)
     column = int(columns)
-
     m2_ = read_matrix(row, column)
     # add matrix 1 and matrix 2
     m14_ = add_matrix(row, column, m1_, m2_)
