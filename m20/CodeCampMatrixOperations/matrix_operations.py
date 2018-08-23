@@ -21,6 +21,7 @@ def mult_matrix(rows, columns, m1_, m2_):
         for j in range(columns):
             for k in range(columns):
                 mat_mul[i][j] += m1_[i][k] * m2_[k][j]
+    print(mat_mul)
     return mat_mul
 
 def add_matrix(rows, columns, m1_, m2_):
@@ -31,7 +32,8 @@ def add_matrix(rows, columns, m1_, m2_):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if len(m1_)==len(m2_) and len(m1_[0])==len(m2_[0]):
+    try:
+        assert if len(m1_)==len(m2_) and len(m1_[0])==len(m2_[0])
         mat_add = []
         for i in range(rows):
             mat_add.append([])
@@ -42,7 +44,9 @@ def add_matrix(rows, columns, m1_, m2_):
         for i in range(rows):
             for j in range(columns):
                 mat_add[i][j] = m1_[i][j] + m2_[i][j]
+        print(mat_add)
         return mat_add
+    except:
 
 
 
@@ -91,12 +95,10 @@ def main():
     m2_ = read_matrix(row, column)
     # add matrix 1 and matrix 2
     m14_ = add_matrix(row, column, m1_, m2_)
-    print(m14_)
 
 
     # multiply matrix 1 and matrix 2
     m3_ = mult_matrix(row, column, m1_, m2_)
-    print(m3_)
 
 if __name__ == '__main__':
     main()
