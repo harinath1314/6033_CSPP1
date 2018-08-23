@@ -33,7 +33,7 @@ def add_matrix(rows, columns, m1_, m2_):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     try:
-        assert if len(m1_)==len(m2_) and len(m1_[0])==len(m2_[0])
+        assert len(m1_)==len(m2_) and len(m1_[0])==len(m2_[0])
         mat_add = []
         for i in range(rows):
             mat_add.append([])
