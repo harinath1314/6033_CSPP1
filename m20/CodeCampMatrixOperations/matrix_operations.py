@@ -24,9 +24,8 @@ def mult_matrix(m1_, m2_):
                 for k in range(len(m1_[0])):
                     mat_mul[i][j] += m1_[i][k] * m2_[k][j]
         return mat_mul
-    else:
-        print("Error: Matrix shapes invalid for mult")
-        return None
+    print("Error: Matrix shapes invalid for mult")
+    return None
 def add_matrix(rows, columns, m1_, m2_):
     '''
         check if the matrix shapes are similar
@@ -50,7 +49,7 @@ def add_matrix(rows, columns, m1_, m2_):
             return mat_add
         print("Error: Matrix shapes invalid for addition")
         return None 
-    except Exception as e:
+    except Exception:
         print("Error: Matrix shapes invalid for addition")
 def read_matrix(rows, columns):
     '''
