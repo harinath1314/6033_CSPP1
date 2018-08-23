@@ -70,10 +70,8 @@ def main():
     column = int(columns)
     
     m1 = read_matrix(row, column)
-    print(m1)
     # read matrix 2
     m2 = read_matrix(row, column)
-    print(m2)
     # add matrix 1 and matrix 2
     m14 = add_matrix(row, column, m1, m2)
     print(m14)
