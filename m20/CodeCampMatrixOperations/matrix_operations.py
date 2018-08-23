@@ -20,8 +20,8 @@ def mult_matrix(m1_, m2_):
                 mat_mul[i].append(j)
                 mat_mul[i][j] = 0
         for i in range(len(m1_)):
-            for j in range(len(m2_[0])):
-                for k in range(len(m2_[0])):
+            for j in range(len(m1_[0])):
+                for k in range(len(m1_[0])):
                     mat_mul[i][j] += m1_[i][k] * m2_[k][j]
         return mat_mul
     else:
