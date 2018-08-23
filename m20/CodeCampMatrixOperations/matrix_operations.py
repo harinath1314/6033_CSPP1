@@ -2,7 +2,7 @@
 this pyhton file performs the multoplication and addition of
 two matrices
 '''
-def mult_matrix(rows, columns, m1_, m2_):
+def mult_matrix(m1_, m2_):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -10,22 +10,24 @@ def mult_matrix(rows, columns, m1_, m2_):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    try:
-        if len(m1_[0]) == len(m2_):
-            mat_mul = []
-            for i in range(rows):
-                mat_mul.append([])
-            for i in range(rows):
-                for j in range(columns):
-                    mat_mul[i].append(j)
-                    mat_mul[i][j] = 0
-            for i in range(rows):
-                for j in range(columns):
-                    for k in range(columns):
-                        mat_mul[i][j] += m1_[i][k] * m2_[k][j]
-            return mat_mul
-    except:
-        pass
+    
+    if len(m1_[0]) == len(m2_[]):
+        mat_mul = []
+        for i in range(len(m1_)):
+            mat_mul.append([])
+        for i in range(len(m1_)):
+            for j in range(len(m2_[0])):
+                mat_mul[i].append(j)
+                mat_mul[i][j] = 0
+        for i in range(rows):
+            for j in range(columns):
+                for k in range(columns):
+                    mat_mul[i][j] += m1_[i][k] * m2_[k][j]
+        return mat_mul
+    else:
+        print("Error: Matrix shapes invalid for mult")
+    
+        
 
 
 def add_matrix(rows, columns, m1_, m2_):
