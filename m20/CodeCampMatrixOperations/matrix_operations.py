@@ -68,7 +68,7 @@ def read_matrix(rows, columns):
                 assert len(inputt)!=len(mat[i])
                 mat[i][j] = int(inputt[j])
         except:
-            raise Error("Invalid input for the matrix")
+            print("Invalid input for the matrix")
     return mat
 
 
