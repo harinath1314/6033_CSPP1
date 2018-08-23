@@ -11,19 +11,20 @@ def mult_matrix(rows, columns, m1_, m2_):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     try:
-        mat_mul = []
-        for i in range(rows):
-            mat_mul.append([])
-        for i in range(rows):
-            for j in range(columns):
-                mat_mul[i].append(j)
-                mat_mul[i][j] = 0
-        for i in range(rows):
-            for j in range(columns):
-                for k in range(columns):
-                    mat_mul[i][j] += m1_[i][k] * m2_[k][j]
-        print(mat_mul)
-        return mat_mul
+        if len(m1_[0])==len(m2_)
+            mat_mul = []
+            for i in range(rows):
+                mat_mul.append([])
+            for i in range(rows):
+                for j in range(columns):
+                    mat_mul[i].append(j)
+                    mat_mul[i][j] = 0
+            for i in range(rows):
+                for j in range(columns):
+                    for k in range(columns):
+                        mat_mul[i][j] += m1_[i][k] * m2_[k][j]
+            print(mat_mul)
+            return mat_mul
     except:
         pass
 
