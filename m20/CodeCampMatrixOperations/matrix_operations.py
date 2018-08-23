@@ -49,6 +49,7 @@ def read_matrix(rows, columns):
         error message should be "Error: Invalid input for the matrix"
     '''
     mat = []
+    inputt = input().split(' ')
     for i in range(rows):
         mat.append([])
     for i in range(rows):
@@ -57,7 +58,6 @@ def read_matrix(rows, columns):
             mat[i][j] = 0
     for i in range(rows):
         for j in range(columns):
-            inputt = input().split()
             mat[i][j] = int(inputt[j])
     return mat
 
