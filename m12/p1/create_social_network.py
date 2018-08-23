@@ -34,15 +34,17 @@ def create_social_network(data):
     # start
     social_met = {}
     a_jus = data.split('\n')
-    hint_ = []
+    a_jus.pop()
+    print(a_jus)
+    hint = []
     for lines in a_jus:
-        lists_ = lines.split(' follows ')
-        print(lists_)
-        for vari_ in lists_:
-            if vari_ not in social_met.keys():
-                social_met[vari_]=lists_[1]
-                print(social_met.keys())
-    
+        hint=lines.split(' follows ')
+        print("hint: ",hint)
+        for puss in hint:
+            print(puss)
+            if puss not in list(social_met.keys()):
+                social_met[puss]=hint[1].split(',')
+            break 
     return social_met
 
 
