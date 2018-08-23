@@ -54,8 +54,8 @@ def read_matrix(rows, columns):
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    mat = []
     try:
+        mat = []
         for i in range(rows):
             mat.append([])
         for i in range(rows):
