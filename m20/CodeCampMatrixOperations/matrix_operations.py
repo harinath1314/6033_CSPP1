@@ -86,7 +86,7 @@ def main():
     m2_ = read_matrix(row, column)
     # add matrix 1 and matrix 2
     m14_ = add_matrix(row, column, m1_, m2_)
-    print(m14)
+    print(m14_)
 
 
     # multiply matrix 1 and matrix 2
