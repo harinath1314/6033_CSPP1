@@ -31,17 +31,19 @@ def add_matrix(rows, columns, m1_, m2_):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    mat_add = []
-    for i in range(rows):
-        mat_add.append([])
-    for i in range(rows):
-        for j in range(columns):
-            mat_add[i].append(j)
-            mat_add[i][j] = 0
-    for i in range(rows):
-        for j in range(columns):
-            mat_add[i][j] = m1_[i][j] + m2_[i][j]
-    return mat_add
+    if len(m1_)==len(m2_) and len(m1_[0])==len(m2_[0]):
+        mat_add = []
+        for i in range(rows):
+            mat_add.append([])
+        for i in range(rows):
+            for j in range(columns):
+                mat_add[i].append(j)
+                mat_add[i][j] = 0
+        for i in range(rows):
+            for j in range(columns):
+                mat_add[i][j] = m1_[i][j] + m2_[i][j]
+        return mat_add
+
 
 
 def read_matrix(rows, columns):
@@ -61,8 +63,12 @@ def read_matrix(rows, columns):
             mat[i][j] = 0
     for i in range(rows):
         inputt = input().split(' ')
-        for j in range(columns):
-            mat[i][j] = int(inputt[j])
+        try:
+            if len(inputt)==len(mat):
+                for j in range(columns):
+                    mat[i][j] = int(inputt[j])
+        except:
+            raise Error("Invalid input for the matrix")
     return mat
 
 
