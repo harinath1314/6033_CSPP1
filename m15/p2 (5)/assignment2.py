@@ -214,8 +214,6 @@ class PlaintextMessage(Message):
         self.encrypting_dict = message.build_shift_dict(shift)
         self.message_text_encrypted = message.apply_shift(shift)
 
-# Helper code ends
-
 class CiphertextMessage(Message):
     ''' CiphertextMessage class '''
     def __init__(self, text):
@@ -260,13 +258,19 @@ class CiphertextMessage(Message):
                 self.decrypted_message = (26-shift, decrypted)
         return self.decrypted_message
 
+# Helper code ends
+
+def decrypt_story():
+    ''' Decrypt the story text using CiphertextMessage class and return the
+        shift value and decrypted string in a tuple.
+    '''
+    decr = CiphertextMessage(get_story_string())
+    retun decr.decrypt_message()
 
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
-    ciphertext = CiphertextMessage(input())
-    print(ciphertext.decrypt_message())
+    print(decrypt_story())
 
 if __name__ == '__main__':
     main()
-
