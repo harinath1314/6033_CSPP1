@@ -11,7 +11,7 @@ def mult_matrix(rows, columns, m1_, m2_):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     try:
-        if len(m1_[0])==len(m2_)
+        if len(m1_[0])==len(m2_):
             mat_mul = []
             for i in range(rows):
                 mat_mul.append([])
