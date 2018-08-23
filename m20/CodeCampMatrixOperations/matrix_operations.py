@@ -57,6 +57,7 @@ def read_matrix(rows, columns):
             mat[i][j] = 0
     for i in range(rows):
         inputt = input().split(' ')
+        print(inputt)
         for j in range(columns):
             mat[i][j] = int(inputt[j])
     return mat
