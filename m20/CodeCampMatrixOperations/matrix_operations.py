@@ -33,18 +33,19 @@ def add_matrix(rows, columns, m1_, m2_):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     try:
-        assert len(m1_)==len(m2_) and len(m1_[0])==len(m2_[0])
-        mat_add = []
-        for i in range(rows):
-            mat_add.append([])
-        for i in range(rows):
-            for j in range(columns):
-                mat_add[i].append(j)
-                mat_add[i][j] = 0
-        for i in range(rows):
-            for j in range(columns):
-                mat_add[i][j] = m1_[i][j] + m2_[i][j]
-        print(mat_add)
+        assert m1_ and m2_ == True
+        if len(m1_)==len(m2_) and len(m1_[0])==len(m2_[0]):
+            mat_add = []
+            for i in range(rows):
+                mat_add.append([])
+            for i in range(rows):
+                for j in range(columns):
+                    mat_add[i].append(j)
+                    mat_add[i][j] = 0
+            for i in range(rows):
+                for j in range(columns):
+                    mat_add[i][j] = m1_[i][j] + m2_[i][j]
+            print(mat_add)
         return mat_add
     except:
         pass
