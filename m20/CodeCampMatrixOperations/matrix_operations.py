@@ -55,21 +55,22 @@ def read_matrix(rows, columns):
         error message should be "Error: Invalid input for the matrix"
     '''
     mat = []
-    for i in range(rows):
-        mat.append([])
-    for i in range(rows):
-        for j in range(columns):
-            mat[i].append(j)
-            mat[i][j] = 0
-    for i in range(rows):
-        inputt = input().split(' ')
-        try:
+    try:
+        for i in range(rows):
+            mat.append([])
+        for i in range(rows):
             for j in range(columns):
-                assert len(inputt)!=len(mat[i])
+                mat[i].append(j)
+                mat[i][j] = 0
+        for i in range(rows):
+            inputt = input().split(' ')
+            for j in range(columns):
+                assert len(inputt)!=len(mat[])
                 mat[i][j] = int(inputt[j])
-        except:
-            print("Invalid input for the matrix")
-    return mat
+        return mat
+    except:
+        print("Error: Invalid input for the matrix")
+    
 
 
 def main():
