@@ -44,7 +44,7 @@ def create_social_network(data):
                     social_met[puss]=hint[1].split(',')
                 break
         else:
-            retun social_met
+            return social_met
 
 
     
