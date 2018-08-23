@@ -77,7 +77,7 @@ def read_matrix(rows, columns):
                 mat[i][j] = int(inputt[j])
         return mat
     except:
-        print("Error: Invalid input for the matrix")
+        raise Exception("Error: Invalid input for the matrix")
 
 
 def main():
@@ -85,25 +85,30 @@ def main():
     the main funtion
     '''
     # read matrix 1
-    inpu = input()
-    (rows, columns) = (inpu.split(','))
-    row = int(rows)
-    column = int(columns)
-    m1_ = read_matrix(row, column)
-    # read matrix 2
-    inpu = input()
-    (rows, columns) = (inpu.split(','))
-    row = int(rows)
-    column = int(columns)
-    m2_ = read_matrix(row, column)
-    # add matrix 1 and matrix 2
-    m14_ = add_matrix(row, column, m1_, m2_)
-    print(m14_)
+    try:
+        inpu = input()
+        (rows, columns) = (inpu.split(','))
+        row = int(rows)
+        column = int(columns)
+        m1_ = read_matrix(row, column)
+        # read matrix 2
+        inpu = input()
+        (rows, columns) = (inpu.split(','))
+        row = int(rows)
+        column = int(columns)
+        m2_ = read_matrix(row, column)
+        # add matrix 1 and matrix 2
+        m14_ = add_matrix(row, column, m1_, m2_)
+        print(m14_)
 
 
-    # multiply matrix 1 and matrix 2
-    m3_ = mult_matrix(row, column, m1_, m2_)
-    print(m3_)
+        # multiply matrix 1 and matrix 2
+        m3_ = mult_matrix(row, column, m1_, m2_)
+        print(m3_)
+    except Exception(e):
+        print(e)
+
+
 
 if __name__ == '__main__':
     main()
