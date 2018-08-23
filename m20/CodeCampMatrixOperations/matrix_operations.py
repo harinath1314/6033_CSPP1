@@ -76,7 +76,7 @@ def read_matrix(rows, columns):
         for i in range(rows):
             inputt = input().split(' ')
             for j in range(columns):
-                assert len(inputt) == len(mat)
+                assert len(inputt) == len(mat[0])
                 mat[i][j] = int(inputt[j])
         return mat
     except:
