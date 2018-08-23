@@ -1,3 +1,7 @@
+'''
+this pyhton file performs the multoplication and addition of
+two matrices
+'''
 def mult_matrix(rows,columns, m1, m2):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -63,28 +67,31 @@ def read_matrix(rows, columns):
 
 
 def main():
+    '''
+    the main funtion
+    '''
     # read matrix 1
     inpu = input()
     (rows, columns) = (inpu.split(','))
     row = int(rows)
     column = int(columns)
     
-    m1 = read_matrix(row, column)
+    m1_ = read_matrix(row, column)
     # read matrix 2
     inpu = input()
     (rows, columns) = (inpu.split(','))
     row = int(rows)
     column = int(columns)
 
-    m2 = read_matrix(row, column)
+    m2_ = read_matrix(row, column)
     # add matrix 1 and matrix 2
-    m14 = add_matrix(row, column, m1, m2)
+    m14_ = add_matrix(row, column, m1_, m2_)
     print(m14)
 
 
     # multiply matrix 1 and matrix 2
-    m3 = mult_matrix(row, column, m1, m2)
-    print(m3)
+    m3_ = mult_matrix(row, column, m1_, m2_)
+    print(m3_)
 
 if __name__ == '__main__':
     main()
