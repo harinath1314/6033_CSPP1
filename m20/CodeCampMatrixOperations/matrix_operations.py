@@ -108,7 +108,7 @@ def main():
 
 
         # multiply matrix 1 and matrix 2
-        m3_ = mult_matrix(row, column, m1_, m2_)
+        m3_ = mult_matrix(m1_, m2_)
         print(m3_)
     except Exception as e:
         print(e)
