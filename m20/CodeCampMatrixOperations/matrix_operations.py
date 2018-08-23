@@ -57,7 +57,6 @@ def read_matrix(rows, columns):
             mat[i][j] = 0
     for i in range(rows):
         inputt = input().split(' ')
-        print(inputt)
         for j in range(columns):
             mat[i][j] = int(inputt[j])
     return mat
@@ -76,7 +75,7 @@ def main():
     (rows, columns) = (inpu.split(','))
     row = int(rows)
     column = int(columns)
-    
+
     m2 = read_matrix(row, column)
     # add matrix 1 and matrix 2
     m14 = add_matrix(row, column, m1, m2)
