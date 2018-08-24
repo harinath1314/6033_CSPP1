@@ -2,7 +2,10 @@
 tic_tac_toe winner selection
 '''
 def read_matrix():
-    rows,columns = 3,3
+    '''
+    reads a matrix
+    '''
+    rows, columns = 3, 3
     mat = []
     for i in range(rows):
         inputt = input().split(' ')
@@ -29,15 +32,15 @@ def winner_ti_ta(tic_tac):
     '''
     outputs the winner
     '''
-    x_,o_,tes_ = 0,0,0
+    x_i, o_i, tes_i = 0,0,0
     if is_game_valid(tic_tac):
         for i in range(len(tic_tac)):
-            x_ += tic_tac[i].count('x')
-            o_ += tic_tac[i].count('o')
-            tes_ += tic_tac[i].count('.')
-        if (x_ - o_ == 1 or o_ - x_ == 1) and tes_ == 0:
+            x_i += tic_tac[i].count('x')
+            o_i += tic_tac[i].count('o')
+            tes_i += tic_tac[i].count('.')
+        if (x_i - o_i == 1 or o_i - x_i == 1) and tes_i == 0:
             return 'draw'
-        if x_ > o_:
+        if x_i > o_:
             return 'x'
         return 'o'
     return 'invalid game'
