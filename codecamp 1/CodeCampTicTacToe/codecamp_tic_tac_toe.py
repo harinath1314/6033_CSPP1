@@ -7,7 +7,7 @@ def read_matrix():
     '''
     rows = 3
     mat = []
-    for i in range(rows):
+    for _ in range(rows):
         inputt = input().split(' ')
         if inputt.count('x') + inputt.count('o') + inputt.count('.') == 3:
             mat.append(inputt)
