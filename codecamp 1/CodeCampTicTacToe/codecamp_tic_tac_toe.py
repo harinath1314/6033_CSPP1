@@ -9,8 +9,7 @@ def read_matrix():
     for i in range(rows):
         inputt = input().split(' ')
         if inputt.count('x')+inputt.count('o')+inputt.count('.') == 3:
-            for j in range(columns):
-                mat.append(inputt)
+            mat.append(inputt)
         else:
             print('invalid input')
             return False
@@ -22,7 +21,8 @@ def is_game_valid(tic_tac):
             temp+=1
     if temp <= 1:
         return True
-    return False
+    else:
+        return False
 
 
 def winner_ti_ta(tic_tac):
@@ -34,10 +34,9 @@ def winner_ti_ta(tic_tac):
             o+=tic_tac[i].count('o')
         if x>o:
             return 'x'
-        elif x==o:
+        if x==o:
             return 'draw'
-        else:
-            return 'o'
+        return 'o'
     else:
         return 'invalid game'
 
