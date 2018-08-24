@@ -30,21 +30,7 @@ def main():
     #read the inputs
     read_matrix()
     if read_matrix:
-        
-
-    
-        
-
-    print(mat)
-
-
-
-
-
-
-
-
-
+        pass
 
 
 if __name__ == '__main__':
