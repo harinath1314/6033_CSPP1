@@ -12,12 +12,11 @@ def read_matrix():
         for j in range(columns):
             mat[i].append(j)
             mat[i][j] = '.'
-    print(mat)
     for i in range(rows):
         inputt = input().split(' ')
         if inputt.count('x')+inputt.count('o')+inputt.count('.') == 3:
             for j in range(columns):
-                mat[i][j] = int(inputt[j])
+                mat[i][j] = (inputt[j])
         print('invalid input')
         return False
     return mat
