@@ -35,7 +35,7 @@ def winner_ti_ta(tic_tac):
     if is_game_valid:
         return None
     else:
-        print('invalid game')
+        return 'invalid game'
 
 
 
@@ -47,7 +47,7 @@ def main():
     tic_tac = read_matrix()
     print()
     if tic_tac:
-        winner_ti_ta(tic_tac)
+        print(winner_ti_ta(tic_tac))
 
 
 
