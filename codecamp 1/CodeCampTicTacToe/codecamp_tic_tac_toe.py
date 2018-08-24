@@ -17,8 +17,9 @@ def read_matrix():
         if inputt.count('x')+inputt.count('o')+inputt.count('.') == 3:
             for j in range(columns):
                 mat[i][j] = (inputt[j])
-        print('invalid input')
-        return False
+        else:
+            print('invalid input')
+            return False
     return mat
 def is_game_valid(tic_tac):
     temp = 0
@@ -32,20 +33,22 @@ def is_game_valid(tic_tac):
 
 def winner_ti_ta(tic_tac):
     if is_game_valid:
-        pass
+        return None
     else:
         print('invalid game')
 
 
-import re
+
 def main():
     '''
     the main function starts here
     '''
     #read the inputs
     tic_tac = read_matrix()
+    print()
     if tic_tac:
         winner_ti_ta(tic_tac)
+
 
 
 if __name__ == '__main__':
