@@ -26,7 +26,8 @@ def is_game_valid(tic_tac):
 
 
 def winner_ti_ta(tic_tac):
-    x=0,o=0
+    x=0
+    o=0
     if is_game_valid(tic_tac):
         for i in range(len(tic_tac)):
             x+=tic_tac[i].count('x')
