@@ -35,7 +35,7 @@ def winner_ti_ta(tic_tac):
             o+=tic_tac[i].count('o')
             tes+=tic_tac[i].count('.')
 
-        if (x-o==1 or o-x==1) and tes=0:
+        if (x-o==1 or o-x==1) and tes==0:
             return 'draw'
         if x>o:
             return 'x'
