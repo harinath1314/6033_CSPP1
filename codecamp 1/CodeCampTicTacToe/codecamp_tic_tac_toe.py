@@ -28,14 +28,17 @@ def is_game_valid(tic_tac):
 def winner_ti_ta(tic_tac):
     x=0
     o=0
+    tes=0
     if is_game_valid(tic_tac):
         for i in range(len(tic_tac)):
             x+=tic_tac[i].count('x')
             o+=tic_tac[i].count('o')
+            tes+=tic_tac[i].count('.')
+
+        if (x-o==1 or o-x==1) and tes=0:
+            return 'draw'
         if x>o:
             return 'x'
-        if x==o:
-            return 'draw'
         return 'o'
     else:
         return 'invalid game'
