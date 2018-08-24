@@ -5,7 +5,7 @@ def read_matrix():
     '''
     reads a matrix
     '''
-    rows, columns = 3, 3
+    rows = 3
     mat = []
     for i in range(rows):
         inputt = input().split(' ')
@@ -32,7 +32,7 @@ def winner_ti_ta(tic_tac):
     '''
     outputs the winner
     '''
-    x_i, o_i, tes_i = 0,0,0
+    x_i, o_i, tes_i = 0, 0, 0
     if is_game_valid(tic_tac):
         for i in range(len(tic_tac)):
             x_i += tic_tac[i].count('x')
@@ -53,14 +53,3 @@ def main():
         print(winner_ti_ta(tic_tac))
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
-
-
-
-
