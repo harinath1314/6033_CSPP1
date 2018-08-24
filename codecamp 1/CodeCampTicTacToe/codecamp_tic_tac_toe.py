@@ -7,12 +7,6 @@ def read_matrix():
     columns = 3
     mat = []
     for i in range(rows):
-        mat.append([])
-    for i in range(rows):
-        for j in range(columns):
-            mat[i].append(j)
-            mat[i][j] = '.'
-    for i in range(rows):
         inputt = input().split(' ')
         if inputt.count('x')+inputt.count('o')+inputt.count('.') == 3:
             for j in range(columns):
