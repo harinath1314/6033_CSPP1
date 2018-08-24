@@ -23,7 +23,7 @@ def read_matrix():
     return mat
 def is_game_valid(tic_tac):
     temp = 0
-    for i in tic_tac:
+    for i in range(len(tic_tac)):
         if len(set(tic_tac[i])) == 1:
             temp+=1
     if temp <= 1:
@@ -32,7 +32,7 @@ def is_game_valid(tic_tac):
 
 
 def winner_ti_ta(tic_tac):
-    if is_game_valid:
+    if is_game_valid(tic_tac):
         return None
     else:
         return 'invalid game'
@@ -45,7 +45,6 @@ def main():
     '''
     #read the inputs
     tic_tac = read_matrix()
-    print()
     if tic_tac:
         print(winner_ti_ta(tic_tac))
 
