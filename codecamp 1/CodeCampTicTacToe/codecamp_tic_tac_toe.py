@@ -40,7 +40,7 @@ def winner_ti_ta(tic_tac):
             tes_i += tic_tac[i].count('.')
         if (x_i - o_i == 1 or o_i - x_i == 1) and tes_i == 0:
             return 'draw'
-        if x_i > o_:
+        if x_i > o_i:
             return 'x'
         return 'o'
     return 'invalid game'
