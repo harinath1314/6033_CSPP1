@@ -150,8 +150,8 @@ class Message(object):
 
 
 ### Paste your implementation of the Message class here
-        
-import string 
+
+import string
 def main():
     '''
         Function to handle testcases
