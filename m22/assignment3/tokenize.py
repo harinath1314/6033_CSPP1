@@ -13,7 +13,7 @@ def tokenize(string):
     list_1 = list(set(list_1))
     for i in range(len(list_1)):
         if i not in list_2:
-            token[list_1[i]] = list_2.count(list_[i])
+            token[list_1[i]] = list_2.count(list_1[i])
     return token
 def main():
     '''
