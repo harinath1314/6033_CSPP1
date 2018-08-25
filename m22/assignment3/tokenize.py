@@ -24,7 +24,7 @@ def main():
     output = []
     for _ in range(lines):
         input_ = input()
-        input_ = re.sub(r'[^a-z,' '']', '', input_)
+        input_ = re.sub(r'[^a-z,'']', '', input_)
         output.append(input_)
         output.append("\n")
     ''.join(output)
