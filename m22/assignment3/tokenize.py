@@ -2,12 +2,32 @@
 Write a function to tokenize a given string and return a dictionary with the frequency of
 each word
 '''
-
 def tokenize(string):
-    pass
-            
+    '''
+    returns a dictonary
+    of frequency of words in input given
+    '''
+    token = {}
+    list_2 = string.split()
+    print(list_2)
+    list_1 = string.split()
+    list_1 = list(set(list_1))
+    print(list_1)
+    for i in range(len(list_1)):
+        if i not in list_2:
+            token[list_1[i]] = list_2.count(i)
+    return token
 def main():
-    pass
-
+    '''
+    this is the main function
+    '''
+    lines = int(input())
+    output = []
+    for _ in range(lines):
+        output.append(input())
+        output.append("\n")
+    ''.join(output)
+    inp_ = ''.join(output)
+    print(tokenize(inp_))
 if __name__ == '__main__':
     main()
