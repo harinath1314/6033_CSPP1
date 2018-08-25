@@ -13,10 +13,10 @@ def check_sudoku(sudoku):
         The function has to return True for a valid sudoku grid and false otherwise
     '''
     row_test, column_test = 0, 0
-    for i in range(len(sudoku)):
+    for _ in range(len(sudoku)):
         if len(set(sudoku[i])) == 9:
             row_test += 1
-    for i in range(len(sudoku)):
+    for _ in range(len(sudoku)):
         column_list = []
         for j in range(len(sudoku)):
             column_list.append(sudoku[j][i])
@@ -24,8 +24,7 @@ def check_sudoku(sudoku):
             column_test += 1
     if row_test == 9 and column_test == 9:
         return True
-    else:
-        return False 
+    return False
 def main():
     '''
         main function to read input sudoku from console
