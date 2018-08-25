@@ -12,6 +12,7 @@ def tokenize(string):
     list_2 = string.split()
     list_1 = string.split()
     list_1 = list(set(list_1))
+    print(list_1)
     for i in range(len(list_1)):
         if i not in list_2:
             token[list_1[i]] = list_2.count(list_1[i])
@@ -28,6 +29,7 @@ def main():
         output.append(input_)
         output.append("\n")
     ''.join(output)
+    print(join(output))
     inp_ = ''.join(output)
     print(tokenize(inp_))
 if __name__ == '__main__':
