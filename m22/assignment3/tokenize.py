@@ -29,7 +29,7 @@ def main():
         output.append(input_)
         output.append("\n")
     ''.join(output)
-    print(join(output))
+    print(''.join(output))
     inp_ = ''.join(output)
     print(tokenize(inp_))
 if __name__ == '__main__':
