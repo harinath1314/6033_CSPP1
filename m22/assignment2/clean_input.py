@@ -9,7 +9,7 @@ def clean_string(string):
     '''
     cleans the given string
     '''
-    string = re.sub(r'[^a-z,0-9]\s', '', string)
+    string = re.sub(r'[^a-z,0-9]', '', string)
     return string
 
 def main():
