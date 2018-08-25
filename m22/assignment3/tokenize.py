@@ -9,10 +9,8 @@ def tokenize(string):
     '''
     token = {}
     list_2 = string.split()
-    print(list_2)
     list_1 = string.split()
     list_1 = list(set(list_1))
-    print(list_1)
     for i in range(len(list_1)):
         if i not in list_2:
             token[list_1[i]] = list_2.count(i)
