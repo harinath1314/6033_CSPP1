@@ -11,6 +11,7 @@ def tokenize(string):
     token = {}
     list_2 = string.split()
     list_1 = string.split()
+    print(list_1)
     list_1 = list(set(list_1))
     list_1.sort()
     print(list_1)
