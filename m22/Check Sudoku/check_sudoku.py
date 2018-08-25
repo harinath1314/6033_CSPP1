@@ -17,11 +17,11 @@ def check_sudoku(sudoku):
         if len(set(sudoku[i])) == 9:
             row_test += 1
     for i in range(len(sudoku)):
+        column_list = []
         for j in range(len(sudoku)):
-            column_list = []
             column_list.append(sudoku[j][i])
-            if len(set(column_list)) == 9:
-                column_test += 1
+        if len(set(column_list)) == 9:
+            column_test += 1
     if row_test == 9 and column_test == 9:
         return True
     else:
