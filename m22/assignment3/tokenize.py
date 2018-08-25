@@ -13,7 +13,6 @@ def tokenize(string):
     list_1 = string.split()
     print(list_1)
     list_1 = list(set(list_1))
-    list_1.sort()
     print(list_1)
     for i in range(len(list_1)):
         if i not in list_2:
